@@ -288,6 +288,16 @@ ul.reset, ul.reset li
 	list-style: none;
 }
 
+li.quicklinks {
+	font-size: 1.15em !important;
+	float: none !important;
+}
+
+li.quicklinks a {
+	color: #e56b69;
+}
+
+
 /* Some BBC related styles.
 ------------------------------------------------------- */
 
@@ -1624,15 +1634,21 @@ p.board-description {
 }
 #posting_icons ul
 {
-	font-size: 0.8em;
+	font-size: 1em;
 }
-#posting_icons ul li {
-	padding: 0 20px 0 0;
+#posting_icons ul li 
+{
+	padding: 0 20px 0 18px;
 }
 #posting_icons img
 {
 	vertical-align: middle;
 	margin: 0 0 0 4ex;
+}
+#posting_icons li 
+{
+	display: flex;
+	align-items: center;
 }
 #postbuttons_upper ul li a span
 {

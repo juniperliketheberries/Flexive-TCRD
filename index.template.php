@@ -195,7 +195,7 @@ function template_body_above()
 	</div>';
 
 	// Show the navigation tree.
-	theme_linktree(false, true);
+	theme_linktree(false, true, true);
 
 	echo '
 <div class="wrapper"', !empty($settings['forum_width']) ? ' style="width: '.$settings['forum_width'].'"' : '', '>';
@@ -310,9 +310,9 @@ function template_html_below()
 }
 
 // Show a linktree. This is that thing that shows "My Community | General Category | General Discussion"..
-function theme_linktree($force_show = false, $index=false)
+function theme_linktree($force_show = false, $index=false, $quicklinks=false)
 {
-	global $context, $settings, $options, $shown_linktree;
+	global $context, $settings, $options, $shown_linktree, $txt;
 
 	// If linktree is empty, just return - also allow an override.
 	if (empty($context['linktree']) || (!empty($context['dont_default_linktree']) && !$force_show))
@@ -349,7 +349,37 @@ function theme_linktree($force_show = false, $index=false)
 			</li>';
 	}
 	echo '
-		</ul>
+		</ul>';
+
+	// If the user is logged in, display stuff like their name, new messages, etc.
+	if ($quicklinks && $context['user']['is_logged'])
+	{
+		echo '
+		<ul class="reset">';
+
+		// Is the forum in maintenance mode?
+		if ($context['in_maintenance'] && $context['user']['is_admin'])
+			echo '
+			<li class="notice quicklinks">', $txt['maintain_mode_on'], '</li>';
+
+		echo '
+			<li class="quicklinks"><a href="', $scripturl, '?action=unread">', $txt['unread_since_visit'], '</a></li>
+			<li class="quicklinks"><a href="', $scripturl, '?action=unreadreplies">', $txt['show_unread_replies'], '</a></li>';
+
+		// Are there any members waiting for approval?
+		if (!empty($context['unapproved_members']))
+			echo '
+			<li class="quicklinks">', $context['unapproved_members'] == 1 ? $txt['approve_thereis'] : $txt['approve_thereare'], ' <a href="', $scripturl, '?action=admin;area=viewmembers;sa=browse;type=approve">', $context['unapproved_members'] == 1 ? $txt['approve_member'] : $context['unapproved_members'] . ' ' . $txt['approve_members'], '</a> ', $txt['approve_members_waiting'], '</li>';
+
+		if (!empty($context['open_mod_reports']) && $context['show_open_reports'])
+			echo '
+			<li class="quicklinks"><a href="', $scripturl, '?action=moderate;area=reports">', sprintf($txt['mod_reports_waiting'], $context['open_mod_reports']), '</a></li>';
+
+		echo '
+		</ul>';
+	}
+
+	echo '
 		</div>
 	</div>';
 
