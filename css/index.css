@@ -34,7 +34,7 @@ table
 body
 {
 	background: #f2f2f2 url(../images/theme/backdrop.png) repeat scroll 0 0;
-	font: 78%/130% "Verdana", "Arial", "Helvetica", sans-serif;
+	font: 85%/130% "Verdana", "Arial", "Helvetica", sans-serif;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -294,7 +294,7 @@ li.quicklinks {
 }
 
 li.quicklinks a {
-	color: #e56b69;
+	color: #B24344;
 }
 
 
@@ -444,7 +444,7 @@ code.bbc_code
 	font-family: arial, helvetica, sans-serif;
 	font-size: 1.1em;
 	font-weight: bold;
-	background: #e56b69;
+	background: #B24344;
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -815,7 +815,7 @@ h4.catbg a.toggle img
 }
 h4.catbg, h4.catbg2 , h3.catbg , h3.catbg2 , .table_list tbody.header td.catbg
 {
-	background: #e56b69;
+	background: #B24344;
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
@@ -831,7 +831,7 @@ h4.titlebg img.icon
 }
 div.cat_bar
 {
-	background: #e56b69;
+	background: #B24344;
 	padding: 0 5px;
 	border-radius: 4px 4px 0 0;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
@@ -900,13 +900,13 @@ table.table_list a.collapse
 }
 tr.catbg th.first_th
 {
-	background: #e56b69;
+	background: #B24344;
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
 tr.catbg th.last_th
 {
-	background: #e56b69;
+	background: #B24344;
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -1604,7 +1604,7 @@ table.table_list tbody.content td.icon
 .table_list tbody.content td.info a.subject
 {
 	font-size: 110%;
-	color: #e56b69;
+	color: #B24344;
 }
 .table_list tbody.content td.children
 {
@@ -3071,7 +3071,7 @@ div#profile_success
 }
 .activity_stats li div.bar div
 {
-	background: #E56B69;
+	background: #B24344;
 }
 .activity_stats li div.bar span
 {
@@ -3335,7 +3335,7 @@ dl.stats dd
 .statsbar div.bar
 {
 	float: left;
-	background: #E56B69;
+	background: #B24344;
 	border-radius: 4px;
 	display: block;
 	margin: 0 4px;
