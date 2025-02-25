@@ -426,6 +426,16 @@ function template_main()
 			echo '
 									<li class="approve_button"><a href="', $scripturl, '?action=moderate;area=postmod;sa=approve;topic=', $context['current_topic'], '.', $context['start'], ';msg=', $message['id'], ';', $context['session_var'], '=', $context['session_id'], '">', $txt['approve'], '</a></li>';
 
+		if ($message['can_like'])		
+			echo '
+									<li class="like_button" id="like_button_', $message['id'], '"><a href="', $scripturl, '?action=like;topic=', $context['current_topic'], ';msg=', $message['id'], '">', $txt['likes_like'], '</a></li>';
+
+		if ($message['can_unlike'])		
+			echo '
+									<li class="unlike_button" id="unlike_button_', $message['id'], '"><a href="', $scripturl, '?action=like;topic=', $context['current_topic'], ';msg=', $message['id'], '">', $txt['likes_unlike'], '</a></li>';
+
+		
+
 		// Can they reply? Have they turned on quick reply?
 		if ($context['can_quote'] && !empty($options['display_quick_reply']))
 			echo '
@@ -628,6 +638,40 @@ function template_main()
 					<span class="botslice"><span></span></span>
 				</div>
 				<hr class="post_separator" />';
+
+		// Now we do likes.
+		global $user_profile;
+		if (!empty($context['post_likes'][$message['id']]))
+		{
+			echo '
+				<div class="', $message['approved'] ? ($message['alternate'] == 0 ? 'windowbg' : 'windowbg2') : 'approvebg', '">
+					<span class="topslice"><span></span></span>
+					<div class="like"><strong><img src="' . $settings['default_images_url'] . '/likes/like.png" alt="', $txt['likes'], '" />', ' ', $message['likes'] == 1 ? $txt['likes_1'] : sprintf($txt['likes_n'], comma_format($message['likes'])), '</strong> ';
+
+			$array_length = count($context['post_likes'][$message['id']]);
+
+			// First, names
+			$names = array();
+			foreach ($context['post_likes'][$message['id']] as $liker)
+			{
+				$names[] = '<a href="' . $scripturl . '?action=profile;u=' . $liker . '">' . $user_profile[$liker]['real_name'] . '</a>';
+				if (count($names) >= 5)
+					break;
+			}
+			// Now we do something with it.
+			if ($array_length <= 5)
+			{
+				$last_name = array_pop($names);
+				echo !empty($names) ? (implode(', ', $names) . ' ' . $txt['likes_and'] . ' ') : '', $last_name, ' ', ($array_length == 1 ? $txt['likes_one'] : $txt['likes_few']);
+			}
+			else
+			{
+				echo implode(', ', $names), ' ', $txt['likes_and'], ' ', comma_format($array_length - 5), ' ', sprintf($txt['likes_more'], $scripturl . '?action=like;display;topic=' . $context['current_topic'] . ';msg=' . $message['id'], sprintf($txt[$array_length == 1 ? 'likes_popup_1' : 'likes_popup_n'], $array_length));
+			}
+		
+			echo '
+				</div><span class="botslice"><span></span></span></div>';
+		}
 	}
 
 	echo '
