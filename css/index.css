@@ -1,6 +1,11 @@
 /* Styles for the general looks for the Curve theme.
 ------------------------------------------------------- */
 
+:root {
+	--red: #B24344;
+	--dark-red: #7F3031;
+}
+
 /* Normal, standard links. */
 a:link, a:visited
 {
@@ -22,6 +27,17 @@ a.new_win:link, a.new_win:visited
 a.new_win:hover
 {
 	text-decoration: underline;
+}
+
+.btn-primary
+{
+	background-color: var(--red)
+}
+
+.btn-primary:hover 
+{
+	background-color: var(--dark-red);
+	border: 0;
 }
 
 /* Tables should show empty cells. */
@@ -294,7 +310,7 @@ li.quicklinks {
 }
 
 li.quicklinks a {
-	color: #B24344;
+	color: var(--red);
 }
 
 
@@ -330,7 +346,7 @@ code.bbc_code
 	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
 	font-size: x-small;
 	background: #eee;
-	border-bottom: 2px solid #B24344;
+	border-bottom: 2px solid var(--red);
 	line-height: 1.5em;
 	padding: 3px 1em;
 	overflow: auto;
@@ -444,7 +460,7 @@ code.bbc_code
 	font-family: arial, helvetica, sans-serif;
 	font-size: 1.1em;
 	font-weight: bold;
-	background: #B24344;
+	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -815,7 +831,7 @@ h4.catbg a.toggle img
 }
 h4.catbg, h4.catbg2 , h3.catbg , h3.catbg2 , .table_list tbody.header td.catbg
 {
-	background: #B24344;
+	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
@@ -831,7 +847,7 @@ h4.titlebg img.icon
 }
 div.cat_bar
 {
-	background: #B24344;
+	background: var(--red);
 	padding: 0 5px;
 	border-radius: 4px 4px 0 0;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
@@ -900,13 +916,13 @@ table.table_list a.collapse
 }
 tr.catbg th.first_th
 {
-	background: #B24344;
+	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
 tr.catbg th.last_th
 {
-	background: #B24344;
+	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -1613,7 +1629,7 @@ table.table_list tbody.content td.icon
 .table_list tbody.content td.info a.subject
 {
 	font-size: 110%;
-	color: #B24344;
+	color: var(--red);
 }
 .table_list tbody.content td.children
 {
@@ -3080,7 +3096,7 @@ div#profile_success
 }
 .activity_stats li div.bar div
 {
-	background: #B24344;
+	background: var(--red);
 }
 .activity_stats li div.bar span
 {
@@ -3344,7 +3360,7 @@ dl.stats dd
 .statsbar div.bar
 {
 	float: left;
-	background: #B24344;
+	background: var(--red);
 	border-radius: 4px;
 	display: block;
 	margin: 0 4px;
