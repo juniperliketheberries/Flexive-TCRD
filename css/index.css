@@ -2017,12 +2017,15 @@ div#pollmoderation
 }
 #forumposts h3 img
 {
-	float: left;
-	margin: 4px 0.5em 0 0;
+	margin: 4px 4px 8px 4px;
 }
 #forumposts h3.catbg
 {
 	margin-bottom: 3px;
+}
+#forumposts .windowbg, #forumposts .windowbg2
+{
+	border-bottom: 1px solid var(--red);
 }
 p#whoisviewing
 {
@@ -3782,7 +3785,6 @@ span.hidelink
 	padding: 0 0 0 3px;
 	display: inline-block !important;
 	text-align: right;
-	float: right;
 }
 #quicknav .social_icon {
 	display: block;
