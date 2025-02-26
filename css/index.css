@@ -2,6 +2,9 @@
 ------------------------------------------------------- */
 
 :root {
+	--off-white: #F5F5F5;
+	--light-pink: #F7F2F2;
+	--salmon: #EECFCF;
 	--red: #B24344;
 	--dark-red: #7F3031;
 }
@@ -324,10 +327,11 @@ li.quicklinks a:hover {
 /* A quote, perhaps from another post. */
 blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 {
-	font-size: x-small;
+	font-size: small;
 	color: #000;
 	line-height: 1.4em;
 	background: url(../images/theme/quote.png) 0.1em 0.1em no-repeat;
+	background-size: 1.5em;
 	padding: 1.1em 1.4em;
 	margin: 0.1em 0 0.3em 0;
 	overflow: auto;
@@ -336,11 +340,16 @@ blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 /* Alterate blockquote stylings */
 blockquote.bbc_standard_quote
 {
-	background-color: #fff;
+	background-color: var(--salmon);
 }
 blockquote.bbc_alternate_quote
 {
 	background-color: #f5f5f5;
+}
+
+blockquote 
+{
+	border-left: 5px solid var(--red);
 }
 
 /* A code block - maybe PHP ;). */
@@ -348,8 +357,9 @@ code.bbc_code
 {
 	display: block;
 	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
-	font-size: x-small;
-	background: #eee;
+	font-size: small;
+	color: #333;
+	background: var(--salmon);
 	border-bottom: 2px solid var(--red);
 	line-height: 1.5em;
 	padding: 3px 1em;
@@ -492,17 +502,17 @@ tr.catbg th a:link, tr.catbg th a:visited, tr.catbg2 td a:link, tr.catbg2 td a:v
 .windowbg, #preview_body
 {
 	color: #000;
-	background-color: #f7f2f2;
+	background-color: var(--off-white);
 }
 .windowbg2
 {
 	color: #000;
-	background-color: #f2ecec;
+	background-color: #FFFDFD;
 }
 .windowbg3
 {
 	color: #000;
-	background-color: #f7f2f2;
+	background-color: var(--off-white);
 }
 
 /* the page navigation area */
@@ -550,22 +560,22 @@ a.navPages
 /* Sticky topics get a different background */
 .stickybg
 {
-	background: #e5e5e5;
+	background: #DDB6B6;
 }
 .stickybg2
 {
-	background: #e5e5e5;
+	background: var(--salmon);
 }
 
 /* Locked posts get a different shade, too! */
 .lockedbg
 {
-	background: #e2d4d4;
+	background: #CECECE;
 	font-style: italic;
 }
 .lockedbg2
 {
-	background: #e2d4d4;
+	background: #DBDBDB;
 	font-style: italic;
 }
 
@@ -956,7 +966,7 @@ table.table_grid
 table.table_grid td
 {
 	padding: 3px;
-	border-bottom: 1px solid #e8e8e8;
+	border-bottom: 1px solid var(--red);
 }
 
 /* GenericList */
@@ -988,7 +998,6 @@ table.table_grid thead tr.catbg th
 .windowbg span.topslice span
 {
 	display: block;
-	background: #f7f2f2;
 	height: 11px;
 	border-radius: 5px 5px 0 0;
 }
@@ -996,7 +1005,6 @@ table.table_grid thead tr.catbg th
 {
 	display: block;
 	padding-left: 20px;
-	background: #f7f2f2;
 	font-size: 5px;
 	line-height: 5px;
 	margin-bottom: 0.2em;
@@ -1004,7 +1012,6 @@ table.table_grid thead tr.catbg th
 .windowbg span.botslice span
 {
 	display: block;
-	background: #f7f2f2;
 	height: 11px;
 }
 
@@ -1012,19 +1019,16 @@ table.table_grid thead tr.catbg th
 {
 	display: block;
 	padding-left: 20px;
-	background: #f2ecec;
 }
 .windowbg2 span.topslice span
 {
 	display: block;
-	background: #f2ecec;
 	height: 11px;
 }
 .windowbg2 span.botslice
 {
 	display: block;
 	padding-left: 20px;
-	background: #f2ecec;
 	font-size: 5px;
 	line-height: 5px;
 	margin-bottom: 0.2em;
@@ -1032,7 +1036,6 @@ table.table_grid thead tr.catbg th
 .windowbg2 span.botslice span
 {
 	display: block;
-	background: #f2ecec;
 	height: 11px;
 }
 .approvebg span.topslice
@@ -1547,6 +1550,10 @@ div#upper_section div.news form
 	font-size: 14px;
 	font-weight: 600;
 }
+.navbar-nav .dropdown:hover 
+{
+	color: var(--red);
+}
 
 /* Topic Action Buttons */
 ul.nav-pills li a {
@@ -1554,7 +1561,8 @@ ul.nav-pills li a {
 }
 
 ul.nav-pills li a:hover {
-	background-color: #e2c3c3;
+	background-color: var(--red);
+	color: white;
 }
 
 ul.nav-pills li.active a
@@ -3734,7 +3742,7 @@ span.hidelink
 	min-width: 300px;
 }
 .boards-box {
-	background-color: #f7f7f7;
+	background-color: var(--off-white);
 	padding: 2px 5px 5px;
 	border-width: 0 1px 1px;
 	border-style: solid;
@@ -3750,13 +3758,13 @@ span.hidelink
 }
 .header-normal {
 	height: 150px;
-	background-color: #F7F2F2;
+	background-color: var(--off-white);
 	padding: 20px 5px;
 }
 .footer-main {
 	margin: 10px 0 0;
 	padding: 20px 10px;
-	background-color: #F7F2F2;
+	background-color: var(--light-pink);
 	border-color: transparent transparent #c2c2c2;
 	border-style: solid;
 	border-width: 1px 0 0;
