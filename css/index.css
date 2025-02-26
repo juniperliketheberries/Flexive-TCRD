@@ -330,7 +330,7 @@ code.bbc_code
 	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
 	font-size: x-small;
 	background: #eee;
-	border-bottom: 2px solid #f56f6c;
+	border-bottom: 2px solid #B24344;
 	line-height: 1.5em;
 	padding: 3px 1em;
 	overflow: auto;
@@ -1519,6 +1519,15 @@ div#upper_section div.news form
 {
 	white-space: pre;
 }
+
+/* Navbar */
+.navbar-brand 
+{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+}
+
 
 /* The footer wih copyright links etc. */
 #footer_section
