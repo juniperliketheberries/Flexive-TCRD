@@ -22,7 +22,7 @@ function template_main()
 			</h3>
 		</div>
 		<div class="pagesection">
-			<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+			<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 		</div>';
 
 	foreach ($context['posts'] as $post)
@@ -77,7 +77,7 @@ function template_main()
 
 	echo '
 		<div class="pagesection">
-			<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+			<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 		</div>
 	</div>';
 }
@@ -123,7 +123,7 @@ function template_unread()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 
 		echo '
@@ -233,7 +233,7 @@ function template_unread()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 	}
 	else
@@ -307,7 +307,7 @@ function template_replies()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 
 		echo '
@@ -410,7 +410,7 @@ function template_replies()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 	}
 	else

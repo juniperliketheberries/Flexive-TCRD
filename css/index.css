@@ -313,6 +313,10 @@ li.quicklinks a {
 	color: var(--red);
 }
 
+li.quicklinks a:hover {
+	color: var(--dark-red);
+}
+
 
 /* Some BBC related styles.
 ------------------------------------------------------- */
@@ -514,9 +518,9 @@ div.pagesection div.floatright input
 	margin-top: 3px;
 }
 
-.pagelinks
+a.navPages
 {
-	padding: 0.6em 0 0.4em 0;
+	color: var(--red) !important;
 }
 
 /* Colors for background of posts requiring approval */
@@ -1544,6 +1548,24 @@ div#upper_section div.news form
 	font-weight: 600;
 }
 
+/* Topic Action Buttons */
+ul.nav-pills li a {
+	background-color: white;
+}
+
+ul.nav-pills li a:hover {
+	background-color: #e2c3c3;
+}
+
+ul.nav-pills li.active a
+{
+	background-color: var(--red);
+}
+
+ul.nav-pills li.active a:hover
+{
+	background-color: var(--dark-red);
+}
 
 /* The footer wih copyright links etc. */
 #footer_section
@@ -1675,15 +1697,29 @@ p.board-description {
 	display: flex;
 	align-items: center;
 }
+#posting_icons .pi_text
+{
+	padding: 0 10px;
+}
 #postbuttons_upper ul li a span
 {
 	line-height: 19px;
 	padding: 0 0 0 6px;
 }
-.nextlinks
+.nextlinks, .nextlinks_bottom
 {
 	text-align: right;
-	margin-top: -1px;
+	padding: 12px 0px;
+	font-size: 1.3em;
+}
+.nextlinks a, .nextlinks_bottom a 
+{
+	padding: 0px 4px;
+	color: var(--red);
+}
+.nextlinks a:hover, .nextlinks_bottom a:hover 
+{
+	color: var(--dark-red);
 }
 .nextlinks_bottom
 {
@@ -1855,6 +1891,11 @@ div.table_frame .table_list
 {
 	padding-top: 1em;
 }
+.pagelinks
+{
+	padding: 0.6em 0 0.4em 0;
+	font-size: 1.3em;
+}
 #moderationbuttons
 {
 	overflow: hidden;
@@ -2017,7 +2058,11 @@ p#whoisviewing
 }
 .poster h4, .poster h4 a
 {
-	color: #c06002;
+	color: var(--red);
+}
+.poster h4, .poster h4 a:hover
+{
+	color: var(--dark-red);
 }
 .poster ul ul
 {
