@@ -338,6 +338,10 @@
 		margin-top: 0;
 		padding-top: 3px;
 	}
+	.navbar-brand
+	{
+		display: block !important;
+	}
 	.poster div.avatar {
 		float: left;
 	}

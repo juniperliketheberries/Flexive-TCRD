@@ -1547,6 +1547,7 @@ div#upper_section div.news form
 /* Navbar */
 .navbar-brand 
 {
+	display: none;
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 600;
