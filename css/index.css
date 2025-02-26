@@ -1419,6 +1419,10 @@ h1.forumtitle a {
 	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 	color: #333;
 }
+
+h1.forumtitle img {
+	height: 128px;
+}
 /* float these items to the right */
 #siteslogan, img#smflogo
 {
@@ -3766,10 +3770,11 @@ span.hidelink
 	padding: 20px 5px;
 }
 .header-normal {
-	height: 150px;
+	height: 160px;
 	background-color: var(--off-white);
 	padding: 20px 5px;
 }
+
 .footer-main {
 	margin: 10px 0 0;
 	padding: 20px 10px;
