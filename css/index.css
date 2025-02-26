@@ -966,7 +966,8 @@ table.table_grid
 table.table_grid td
 {
 	padding: 3px;
-	border-bottom: 1px solid var(--red);
+	border-bottom: 1px solid var(--off-white);
+	border-right: 1px solid var(--off-white);
 }
 
 /* GenericList */
@@ -1845,6 +1846,10 @@ div.table_frame .table_list
 #messageindex
 {
 	clear: both;
+}
+#messageindex a:hover
+{
+	color: var(--dark-red);
 }
 /* the page navigation area */
 .childboards
