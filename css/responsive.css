@@ -383,11 +383,13 @@
 	}
 	.dropdown-menu li a
 	{
-		color: #ccc !important;
+		color: #ddd !important;
+		background-color: var(--dark-red) !important;
 	}
 	.dropdown-menu li a:hover
 	{
 		color: #fff !important;
+		background-color: var(--dark-red) !important;
 	}
 	.msearch_details
 	{
