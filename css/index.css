@@ -2109,6 +2109,16 @@ p#whoisviewing
 	width: 100%;
 }
 
+/* Like bar along bottom of each post */
+.like 
+{
+	margin: 0 1.5em 0 1.5em;
+}
+.like strong
+{
+	margin-right: 8px;
+}
+
 .moderatorbar
 {
 	clear: right;

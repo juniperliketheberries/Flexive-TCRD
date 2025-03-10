@@ -640,6 +640,7 @@ function template_main()
 				<hr class="post_separator" />';
 
 		// Now we do likes.
+		// Custom 'likes' code by Gin&Toxic that does not hide additional likes above 5
 		global $user_profile;
 		if (!empty($context['post_likes'][$message['id']]))
 		{
@@ -655,19 +656,28 @@ function template_main()
 			foreach ($context['post_likes'][$message['id']] as $liker)
 			{
 				$names[] = '<a href="' . $scripturl . '?action=profile;u=' . $liker . '">' . $user_profile[$liker]['real_name'] . '</a>';
+
+				/*
 				if (count($names) >= 5)
 					break;
+					*/
 			}
+
+			$last_name = array_pop($names);
+
+			echo !empty($names) 
+				? (implode(', ', $names) . ' ' . $txt['likes_and'] . ' ') : '', $last_name, ' ', ($array_length == 1 ? $txt['likes_one'] : $txt['likes_few']);
+
 			// Now we do something with it.
-			if ($array_length <= 5)
-			{
-				$last_name = array_pop($names);
-				echo !empty($names) ? (implode(', ', $names) . ' ' . $txt['likes_and'] . ' ') : '', $last_name, ' ', ($array_length == 1 ? $txt['likes_one'] : $txt['likes_few']);
-			}
-			else
-			{
-				echo implode(', ', $names), ' ', $txt['likes_and'], ' ', comma_format($array_length - 5), ' ', sprintf($txt['likes_more'], $scripturl . '?action=like;display;topic=' . $context['current_topic'] . ';msg=' . $message['id'], sprintf($txt[$array_length == 1 ? 'likes_popup_1' : 'likes_popup_n'], $array_length));
-			}
+			// if ($array_length <= 5)
+			// {
+			// 	$last_name = array_pop($names);
+			// 	echo !empty($names) ? (implode(', ', $names) . ' ' . $txt['likes_and'] . ' ') : '', $last_name, ' ', ($array_length == 1 ? $txt['likes_one'] : $txt['likes_few']);
+			// }
+			// else
+			// {
+			// 	echo implode(', ', $names), ' ', $txt['likes_and'], ' ', comma_format($array_length - 5), ' ', sprintf($txt['likes_more'], $scripturl . '?action=like;display;topic=' . $context['current_topic'] . ';msg=' . $message['id'], sprintf($txt[$array_length == 1 ? 'likes_popup_1' : 'likes_popup_n'], $array_length));
+			// }
 		
 			echo '
 				</div><span class="botslice"><span></span></span></div>';
