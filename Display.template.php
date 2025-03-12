@@ -635,9 +635,7 @@ function template_main()
 		echo '
 						</div>
 					</div>
-					<span class="botslice"><span></span></span>
-				</div>
-				<hr class="post_separator" />';
+					<span class="botslice"><span></span></span>';
 
 		// Now we do likes.
 		// Custom 'likes' code by Gin&Toxic that does not hide additional likes above 5
@@ -645,7 +643,6 @@ function template_main()
 		if (!empty($context['post_likes'][$message['id']]))
 		{
 			echo '
-				<div class="', $message['approved'] ? ($message['alternate'] == 0 ? 'windowbg' : 'windowbg2') : 'approvebg', '">
 					<span class="topslice"><span></span></span>
 					<div class="like"><strong><img src="' . $settings['default_images_url'] . '/likes/like.png" alt="', $txt['likes'], '" />', ' ', $message['likes'] == 1 ? $txt['likes_1'] : sprintf($txt['likes_n'], comma_format($message['likes'])), '</strong> ';
 
@@ -680,8 +677,12 @@ function template_main()
 			// }
 		
 			echo '
-				</div><span class="botslice"><span></span></span></div>';
+				</div><span class="botslice"><span></span></span>';
 		}
+
+		echo '
+			</div>
+			<hr class="post_separator" />';
 	}
 
 	echo '

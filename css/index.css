@@ -2139,6 +2139,8 @@ p#whoisviewing
 .like 
 {
 	margin: 0 1.5em 0 1.5em;
+	border-top: 1px #ccc solid;
+	padding-top: 0.65em;
 }
 .like strong
 {
