@@ -612,15 +612,32 @@ a.navPages
 /* Sometimes there will be an error when you post */
 .error
 {
-	color: red;
+	color: var(--dark-red);
 }
 
 /* Messages that somehow need to attract the attention. */
 .alert
 {
-	color: red;
+	color: var(--dark-red);
 }
-
+.alert-danger
+{
+	background-color: var(--salmon);
+	border-color: var(--dark-red);
+	border-radius: 12px;
+}
+.alert-dismissable .close
+{
+	top: 2px;
+}
+.close
+{
+	opacity: 0.3;
+}
+.close:hover, .close:active 
+{
+	border-width: 0px;
+}
 /* Calendar colors for birthdays, events and holidays */
 .birthday
 {
