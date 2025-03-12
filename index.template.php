@@ -398,7 +398,7 @@ function template_menu()
 {
 	global $context, $settings, $options, $scripturl, $txt;
 
-	$prevent_actions = array('search','logout','login', 'register');
+	$prevent_actions = array('search','logout','login','register');
 	
 	echo '
 				<nav class="navbar  navbar-inverse" id="topnav">
@@ -487,7 +487,7 @@ function template_menu()
 								<li class="userinf dropdown active">
 									<a href="', $scripturl, '?action=profile" class="dropdown-toggle" data-toggle="dropdown">
 										<img src="', ($context['user']['avatar'] ? $context['user']['avatar']['href'] : $settings['images_url']. '/theme/noavatar.png'), '" alt="', $txt['profile'], '" />
-										', $context['user']['name'], ($context['user']['unread_messages'] == 0) ? '' : ' <span class="label label-primary visible-xs-inline">' . $context['user']['unread_messages'] . '</span>', ' <span class="caret"></span>
+										', $context['user']['name'], ($context['user']['unread_messages'] == 0) ? '' : ' <span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu" role="menu">';
 
@@ -500,8 +500,6 @@ function template_menu()
 										<li><a href="', $scripturl, '?action=unread"><span class="fa fa-list"></span> ', $txt['unread_topics_visit'], '</a></li>
 										<li><a href="', $scripturl, '?action=unreadreplies"><span class="fa fa-comment"></span> ', $txt['unread_replies'], '</a></li>
 										<li class="divider"></li>
-										', !empty($context['user']['unread_messages']) ? '<li class="visible-xs"><a href="'. $scripturl. '?action=pm"><span class="fa fa-inbox"></span> '. $txt['pm_short']. ' <span class="label label-primary">' . $context['user']['unread_messages'] . '</span></li>' : '', '
-										', ($context['user']['unread_messages'] == 0) ? '' : '<li class="divider visible-xs"></li>', '
 										<li><a href="', $scripturl, '?action=logout;' . $context['session_var'] . '=' . $context['session_id']. '"><span class="fa fa-sign-out"></span> ', $txt['logout'], '</a></li>';
 								}
 								else  {
@@ -515,7 +513,7 @@ function template_menu()
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li class="dropdown">
-									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="fa fa-search"></span>', $txt['search'], ' <b class="caret"></b></a>
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="fa fa-search"></span><span class="search-label">', $txt['search'], '</span> <b class="caret"></b></a>
 									<ul class="dropdown-menu negative-search">
 										<li>
 											<div class="row">

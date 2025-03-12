@@ -1606,6 +1606,10 @@ div#upper_section div.news form
 .dropdown-menu > li > a:hover {
 	background-color: var(--light-pink) !important;
 }
+.navbar-nav .search-label
+{
+	display:none;
+}
 
 /* Topic Action Buttons */
 ul.nav-pills li a {
