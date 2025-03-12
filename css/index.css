@@ -927,6 +927,7 @@ img#upshrink_ic, img#newsupshrink
 a.unreadlink, a.collapse
 {
 	float: right;
+	padding-right: 8px;
 }
 table.table_list a.collapse
 {
@@ -1757,6 +1758,10 @@ p.board-description {
 #boardindex_table .table_list thead, #boardindex_table .table_list tfoot
 {
 	display: none;
+}
+#boardindex_table .collapse
+{
+	display:block;
 }
 
 /* the posting icons */
