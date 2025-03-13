@@ -2735,6 +2735,10 @@ fieldset.merge_options
 	width: 44%;
 	padding: 0.1em;
 }
+.login dt input, .login dd input 
+{
+	height: 24px !important;
+}
 .login dt
 {
 	float: left;
@@ -2747,6 +2751,9 @@ fieldset.merge_options
 	width: 54%;
 	float: right;
 	text-align: left;
+}
+.login dd input {
+	width: 54%;
 }
 .login p
 {
