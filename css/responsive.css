@@ -609,18 +609,23 @@
 		height: 5em !important;
 		padding: 0;
 	}
+	#main_container
+	{
+		flex-direction: column !important;
+	}
 	#main_admsection #basicinfo h4
 	{
 		width: 100% !important;
 	}
 	#left_admsection
 	{
-		margin: 0 0 8px;
-		padding: 0 0 5px;
+		margin: 0 0 8px !important;;
+		padding: 0 0 5px !important;
 		border-bottom: 3px solid #dbe4ef;
 		float: none;
-		width: 100%;
+		width: 100% !important;
 	}
+	
 
 	/* some dirty fix for SP :)*/
 	#sp_left, #sp_right, #sp_center

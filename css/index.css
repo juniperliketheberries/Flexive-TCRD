@@ -2917,18 +2917,20 @@ tr.titlebg td
 }
 #left_admsection
 {
-	width: 160px;
+	width: 220px;
 	float: left;
 	padding-right: 10px;
 }
 .adm_section h4.titlebg
 {
-	font-size: 95%;
+	font-size: 100%;
 	margin-bottom: 5px;
 }
 #main_container
 {
 	position: relative;
+	display: flex;
+	flex-direction: row;
 }
 .left_admmenu li
 {
