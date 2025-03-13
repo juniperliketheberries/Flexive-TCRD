@@ -1571,6 +1571,7 @@ div#upper_section div.news form
 .navbar 
 {
 	background: var(--dark-red);
+	min-height: 32px !important;
 }
 .navbar-brand 
 {
@@ -1579,24 +1580,38 @@ div#upper_section div.news form
 	font-size: 14px;
 	font-weight: 600;
 }
+.navbar li a
+{
+	padding: 10px 10px !important;
+	height: 42px;
+	line-height: 22px;
+}
 .navbar-nav .dropdown:hover 
 {
 	color: var(--red);
 }
-.navbar-inverse .navbar-nav > li > a:focus, 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus
+.navbar-nav .dropdown-menu li a
 {
-	box-shadow: inset 0 -5px 0 0 var(--off-white);
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase !important;
 }
-
+.navbar .navbar-nav > li > a:focus, 
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus
+{
+	box-shadow: inset 0 -5px 0 0 var(--light-pink);
+}
+.navbar .navbar-nav li.userinf a
+{
+	box-shadow: none;
+}
 .navbar .navbar-nav li.userinf a img
 {
 	display: none;
 }
-
 .navbar-collapse
 {
 	padding-left: 0px;
@@ -1606,16 +1621,20 @@ div#upper_section div.news form
 {
 	padding: 0px;
 }
-
-.dropdown-menu > li > a 
+.dropdown-menu li a 
 {
 	padding: 8px 20px;
 	color: var(--grey20) !important;
 	background-color: #FFF !important;
+	text-transform: capitalize !important;
 }
-
-.dropdown-menu > li > a:hover {
+.dropdown-menu li a:hover 
+{
 	background-color: var(--light-pink) !important;
+}
+.dropdown-menu .divider 
+{
+	margin: 0px;
 }
 .navbar-nav .search-label
 {
