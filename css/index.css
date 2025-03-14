@@ -1598,7 +1598,6 @@ div#upper_section div.news form
 {
 	font-size: 12px;
 	font-weight: bold;
-	text-transform: uppercase !important;
 }
 .navbar .navbar-nav > li > a:focus, 
 .navbar .navbar-nav > li > a:hover,
