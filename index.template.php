@@ -393,6 +393,12 @@ function flexive_copy() {
 	return $flexive;
 }
 
+function stylized_action_number($title, $value) 
+{
+	$txt = $title . (($value == 0) ? '' : '   <span class="label label-primary">' . $value . '</span>');
+	return $txt;
+}
+
 // Show the menu up top. Something like [home] [help] [profile] [logout]...
 function template_menu()
 {
@@ -401,6 +407,13 @@ function template_menu()
 //	$prevent_actions = array('search','logout','login','register');
 // 	Hiding 'profile' section in the menu bar since options are all provided in the user dropdown
 	$prevent_actions = array('search','profile','logout','login','register');
+
+	// Custom 'messages' style
+	if ($context['user']['is_logged'] && $context['user']['unread_messages'] > 0 && isset($context['menu_buttons']['pm'])) 
+	{
+		$context['menu_buttons']['pm']['alttitle'] = stylized_action_number($txt['pm_short'], $context['user']['unread_messages']);
+		$context['menu_buttons']['pm']['title'] = stylized_action_number($txt['pm_short'], $context['user']['unread_messages']);
+	}
 
 	
 	echo '
@@ -490,7 +503,7 @@ function template_menu()
 								<li class="userinf dropdown active">
 									<a href="', $scripturl, '?action=profile" class="dropdown-toggle" data-toggle="dropdown">
 										<img src="', ($context['user']['avatar'] ? $context['user']['avatar']['href'] : $settings['images_url']. '/theme/noavatar.png'), '" alt="', $txt['profile'], '" />
-										', $context['user']['name'], ($user_settings['unread_mentions'] == 0) ? '' : '   <span class="label label-primary visible-xs-inline">' . $user_settings['unread_mentions'] . '</span>', ' <span class="caret"></span>
+										', stylized_action_number($context['user']['name'], $user_settings['unread_mentions']), ' <span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu" role="menu">';
 
@@ -498,7 +511,7 @@ function template_menu()
 								if ($context['user']['is_logged']) {
 									echo '
 										<li><a href="', $scripturl, '?action=profile"><span class="fa fa-user"></span> ', $txt['summary'], '</a></li>
-										<li><a href="', $scripturl, '?action=profile;area=mentions"><span class="fa fa-quote-right"></span> ', $txt['mentions'], ($user_settings['unread_mentions'] == 0) ? '' : '   <span class="label label-primary visible-xs-inline">' . $user_settings['unread_mentions'] . '</span>',  ' </a></li>
+										<li><a href="', $scripturl, '?action=profile;area=mentions"><span class="fa fa-quote-right"></span> ', stylized_action_number($txt['mentions'], $user_settings['unread_mentions']), ' </a></li>
 										<li><a href="', $scripturl, '?action=profile;area=forumprofile"><span class="fa fa-wrench"></span> ', $txt['forumprofile'], '</a></li>
 										<li><a href="', $scripturl, '?action=profile;area=account"><span class="fa fa-cog"></span> ', $txt['account'], '</a></li>
 										<li><a href="', $scripturl, '?action=unread"><span class="fa fa-list"></span> ', $txt['unread_topics_visit'], '</a></li>
