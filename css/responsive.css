@@ -195,9 +195,25 @@
 	{
 		display: none;
 	}
-	.hidden, .icon, .stats, #posting_icons, #mlist th, .icon1, .icon2
+	.hidden
 	{
 		display: none;
+	}
+	.icon, .icon1, .icon2, .th-icon, .th-icon1, .th-icon2
+	{
+		display: none;
+	}
+	.stats, .th-stats
+	{
+		display: none;
+	}
+	#posting_icons, #mlist th
+	{
+		/* display: none; */
+	}
+	table.table_list tbody.content td.lastpost, .topic_table table tbody tr td.lastpost
+	{
+		width: 42% !important;
 	}
 	#statistics .stats
 	{
@@ -480,7 +496,7 @@
 	{
 		width: 100% !important;
 	}
-	#wrapper, div#wrapper
+	.wrapper, div.wrapper
 	{
 		width: 100% !important;
 		min-width: 240px !important;
@@ -507,10 +523,6 @@
 		float: none;
 		text-align: center;
 		margin: 0 auto;
-	}
-	table.table_list tbody.content td.stats, .lastpost
-	{
-		display: none;
 	}
 	img.icon 
 	{
@@ -635,7 +647,7 @@
 	}
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 640px) and (max-width: 767px) {
 	table.table_list tbody.content td.lastpost, .topic_table table tbody tr td.lastpost
 	{
 		width: 35% !important;

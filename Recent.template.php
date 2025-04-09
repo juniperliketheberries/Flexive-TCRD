@@ -131,18 +131,18 @@ function template_unread()
 				<table class="table_grid" cellspacing="0">
 					<thead>
 						<tr class="catbg">
-							<th scope="col" class="first_th hidden-xs" width="8%" colspan="2">&nbsp;</th>
-							<th scope="col">
+							<th scope="col" class="first_th th-icon hidden-xs-maybe" width="8%" colspan="2">&nbsp;</th>
+							<th scope="col" class="th-subject">
 								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=subject', $context['sort_by'] == 'subject' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['subject'], $context['sort_by'] == 'subject' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>
-							<th scope="col" width="14%" align="center" class="hidden-xs">
+							<th scope="col" width="14%" align="center" class="th-stats hidden-xs-maybe">
 								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=replies', $context['sort_by'] == 'replies' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['replies'], $context['sort_by'] == 'replies' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 
 		// Show a "select all" box for quick moderation?
 		if ($showCheckboxes)
 			echo '
-							<th scope="col" width="22%" class="hidden-xs">
+							<th scope="col" width="22%" class="hidden-xs-maybe">
 								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] == 'last_post' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] == 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>
 							<th class="last_th">
@@ -150,7 +150,7 @@ function template_unread()
 							</th>';
 		else
 			echo '
-							<th scope="col" class="smalltext last_th hidden-xs" width="22%">
+							<th scope="col" class="smalltext last_th hidden-xs-maybe" width="22%">
 								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] == 'last_post' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] == 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 		echo '
@@ -171,10 +171,10 @@ function template_unread()
 
 			echo '
 						<tr>
-							<td class="', $color_class, ' icon1 windowbg hidden-xs">
+							<td class="', $color_class, ' icon1 windowbg hidden-xs-maybe">
 								<img src="', $settings['images_url'], '/topic/', $topic['class'], '.gif" alt="" />
 							</td>
-							<td class="', $color_class, ' icon2 windowbg hidden-xs">
+							<td class="', $color_class, ' icon2 windowbg hidden-xs-maybe">
 								<img src="', $topic['first_post']['icon_url'], '" alt="" />
 							</td>
 							<td class="subject ', $color_class2, ' windowbg2">
@@ -188,7 +188,7 @@ function template_unread()
 									</p>
 								</div>
 							</td>
-							<td class="', $color_class, ' stats windowbg hidden-xs">
+							<td class="', $color_class, ' stats windowbg hidden-xs-maybe">
 								', $topic['replies'], ' ', $txt['replies'], '
 								<br />
 								', $topic['views'], ' ', $txt['views'], '
@@ -315,18 +315,18 @@ function template_replies()
 				<table class="table_grid" cellspacing="0">
 					<thead>
 						<tr class="catbg">
-							<th scope="col" class="first_th hidden-xs" width="8%" colspan="2">&nbsp;</th>
+							<th scope="col" class="first_th hidden-xs-maybe" width="8%" colspan="2">&nbsp;</th>
 							<th scope="col">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=subject', $context['sort_by'] === 'subject' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['subject'], $context['sort_by'] === 'subject' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>
-							<th scope="col" width="14%" align="center" class="hidden-xs">
+							<th scope="col" width="14%" align="center" class="hidden-xs-maybe">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=replies', $context['sort_by'] === 'replies' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['replies'], $context['sort_by'] === 'replies' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 
 		// Show a "select all" box for quick moderation?
 		if ($showCheckboxes)
 				echo '
-							<th scope="col" width="22%" class="hidden-xs">
+							<th scope="col" width="22%" class="hidden-xs-maybe">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] === 'last_post' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] === 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>
 							<th class="last_th">
@@ -334,7 +334,7 @@ function template_replies()
 							</th>';
 		else
 			echo '
-							<th scope="col" class="last_th hidden-xs" width="22%">
+							<th scope="col" class="last_th hidden-xs-maybe" width="22%">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] === 'last_post' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] === 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 		echo '
@@ -355,10 +355,10 @@ function template_replies()
 
 			echo '
 						<tr>
-							<td class="', $color_class, ' icon1 windowbg hidden-xs">
+							<td class="', $color_class, ' icon1 windowbg hidden-xs-maybe">
 								<img src="', $settings['images_url'], '/topic/', $topic['class'], '.gif" alt="" />
 							</td>
-							<td class="', $color_class, ' icon2 windowbg hidden-xs">
+							<td class="', $color_class, ' icon2 windowbg hidden-xs-maybe">
 								<img src="', $topic['first_post']['icon_url'], '" alt="" />
 							</td>
 							<td class="subject ', $color_class2, ' windowbg2">
@@ -372,7 +372,7 @@ function template_replies()
 									</p>
 								</div>
 							</td>
-							<td class="', $color_class, ' stats windowbg hidden-xs">
+							<td class="', $color_class, ' stats windowbg hidden-xs-maybe">
 								', $topic['replies'], ' ', $txt['replies'], '
 								<br />
 								', $topic['views'], ' ', $txt['views'], '
