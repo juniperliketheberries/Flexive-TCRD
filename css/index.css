@@ -2637,6 +2637,16 @@ ul.post_options li
 	clear: both;
 }
 
+/* Styles for inline labels */
+.visible-lg, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block, 
+.visible-md, .visible-md-block, .visible-md-inline, .visible-md-inline-block, 
+.visible-sm, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, 
+.visible-xs, .visible-xs-block, .visible-xs-inline, .visible-xs-inline-block,
+.visible-print, .visible-print-block, .visible-print-inline, .visible-print-inline-block
+{
+	display: inline !important;
+}
+
 /* Styles for the move topic section.
 ---------------------------------------------------- */
 
