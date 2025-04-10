@@ -1021,7 +1021,6 @@ table.table_grid thead tr.catbg th
 {
 	display: block;
 	padding-left: 20px;
-	background: #f7f2f2;
 	border-radius: 5px 5px 0 0;
 }
 .windowbg span.topslice span
@@ -2183,7 +2182,10 @@ p#whoisviewing
 {
 	margin-right: 8px;
 }
-
+ul.quickbuttons li.like_button, ul.quickbuttons li.unlike_button
+{
+	background: url(../../default/images/likes/like.png) no-repeat 0 0;
+}
 .moderatorbar
 {
 	clear: right;

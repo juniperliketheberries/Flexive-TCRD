@@ -183,8 +183,7 @@ function template_main()
 				<div class="cat_bar">
 					<h3 class="catbg">
 						<img src="', $settings['images_url'], '/topic/', $context['class'], '.gif" alt="" />
-						<span id="author">', $txt['author'], '</span>
-						', $txt['topic'], ': ', $context['subject'], ' &nbsp;(', $txt['read'], ' ', $context['num_views'], ' ', $txt['times'], ')
+						', $context['subject'], ' &nbsp;(', $txt['read'], ' ', $context['num_views'], ' ', $txt['times'], ')
 					</h3>
 				</div>';
 
@@ -412,7 +411,7 @@ function template_main()
 									<h5 id="subject_', $message['id'], '">
 										<a href="', $message['href'], '" rel="nofollow">', $message['subject'], '</a>
 									</h5>
-									<div class="smalltext">&#171; <strong>', !empty($message['counter']) ? $txt['reply_noun'] . ' #' . $message['counter'] : '', ' ', $txt['on'], ':</strong> ', $message['time'], ' &#187;</div>
+									<div class="smalltext"> ', $message['time'], ' </div>
 									<div id="msg_', $message['id'], '_quick_mod"></div>
 								</div>';
 
@@ -562,10 +561,10 @@ function template_main()
 						<div class="moderatorbar">
 							<div class="smalltext modified" id="modified_', $message['id'], '">';
 
-		// Show "� Last Edit: Time by Person �" if this post was edited.
+		// Show "Last Edit: Time by Person" if this post was edited.
 		if ($settings['show_modify'] && !empty($message['modified']['name']))
 			echo '
-								&#171; <em>', $txt['last_edit'], ': ', $message['modified']['time'], ' ', $txt['by'], ' ', $message['modified']['name'], '</em> &#187;';
+								<em>', $txt['last_edit'], ': ', $message['modified']['time'], ' ', $txt['by'], ' ', $message['modified']['name'], '</em>';
 
 		echo '
 							</div>
@@ -643,7 +642,6 @@ function template_main()
 		if (!empty($context['post_likes'][$message['id']]))
 		{
 			echo '
-					<span class="topslice"><span></span></span>
 					<div class="like"><strong><img src="' . $settings['default_images_url'] . '/likes/like.png" alt="', $txt['likes'], '" />', ' ', $message['likes'] == 1 ? $txt['likes_1'] : sprintf($txt['likes_n'], comma_format($message['likes'])), '</strong> ';
 
 			$array_length = count($context['post_likes'][$message['id']]);
