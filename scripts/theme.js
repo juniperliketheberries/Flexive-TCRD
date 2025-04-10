@@ -105,7 +105,7 @@ $(document).ready(function(){
 	$(".errorbox").attr("class", "alert alert-dismissable alert-danger"); 
 	$("input[name=delete]").before("<span class='btn-label' style='left: 7px !important; top: -3px;'><i class='fa fa-trash-o'></i></span>");
 	$("input[name=delete], button[name=delete]").attr("class", "btn btn-danger").attr("style", "padding-left: 45px; margin-left: -25px;");
-	$("img[alt=\'"+txtnew+"'], img.new_posts").replaceWith("<span class=\'label label-primary\'> "+txtnew+"</span>");
+	$("img[alt=\'"+txtnew+"'], img.new_posts").replaceWith(" <span class=\'label label-primary\'>"+txtnew+"</span>");
 	if (st_disable_fa_icons != 1) {
 		$("img[src=\'"+smf_images_url+"/"+varianteurl+"off.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"new_none.png\']").replaceWith("<span style=\'opacity: 0.3;\' class=\'far fa-copy fa-3x\'></span>");
 		$("img[src=\'"+smf_images_url+"/"+varianteurl+"on.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"on2.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"new_some.png\']").replaceWith("<span class=\'fas fa-copy fa-3x text-primary\'></span>");
