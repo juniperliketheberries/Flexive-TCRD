@@ -38,11 +38,11 @@ a.new_win:hover
 	background-color: var(--red)
 }
 
-.btn-primary:hover 
+.btn-primary:hover, .btn-primary:focus
 {
 	background-color: var(--dark-red);
-	border: 0;
-	border-bottom: 2px solid rgba(0,0,0,.2);
+	border: 0 !important;
+	border-bottom: 2px solid rgba(0,0,0,.2) !important;
 }
 
 /* Tables should show empty cells. */
@@ -104,6 +104,7 @@ form
 input, textarea
 {
 	border-radius: 3px !important;
+	max-width: 99%;
 }
 
 input, button, select, textarea
@@ -1815,7 +1816,7 @@ p.board-description {
 }
 #posting_icons ul li 
 {
-	padding: 0 20px 0 18px;
+	padding: 4px 18px;
 }
 #posting_icons img
 {
@@ -2025,9 +2026,9 @@ div.table_frame .table_list
 {
 	padding-top: 1em;
 }
-.pagelinks
+.pagelinks, .pagesection > span
 {
-	padding-top: 12px;
+	padding: 12px 0;
 	font-size: 1.3em;
 }
 #moderationbuttons
@@ -2922,6 +2923,11 @@ tr.titlebg td
 {
 	margin-bottom: 15px;
 }
+#admin_content div.flow_auto div.pagesection
+{
+	display: block;
+	font-size: 1.3em;
+} 
 #admin_login .centertext
 {
 	padding: 1em;
@@ -3370,6 +3376,7 @@ div#profile_success
 
 .counter
 {
+	display: none;
 	margin: 0 0 0 0;
 	padding: 0.2em 0.5em 0.1em 0.2em;
 	font-size: 2.2em;
@@ -3652,6 +3659,15 @@ tr.windowbg2 td.stats_day
 {
 	padding: 0.5em 1.3em;
 }
+#personal_messages .first_th, #personal_messages .last_th
+{
+	text-align: center;
+}
+#personal_messages .pagesection > div.floatleft
+{
+	font-size: 1.3em !important;
+	padding: 12px 0px;
+}
 #searchLabelsExpand li
 {
 	padding: 0.3em 0.5em;
@@ -3828,6 +3844,7 @@ span.hidelink
 	margin: 0 auto;
 	width: 600px;
 	padding-top: 1em;
+	padding-bottom: 1em;
 	overflow: hidden;
 }
 #advanced_search dt

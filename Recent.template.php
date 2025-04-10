@@ -22,7 +22,7 @@ function template_main()
 			</h3>
 		</div>
 		<div class="pagesection">
-			<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 		</div>';
 
 	foreach ($context['posts'] as $post)
@@ -34,7 +34,7 @@ function template_main()
 					<div class="counter">', $post['counter'], '</div>
 					<div class="topic_details">
 						<h5>', $post['board']['link'], ' / ', $post['link'], '</h5>
-						<span class="smalltext">&#171;&nbsp;', $txt['last_post'], ' ', $txt['by'], ' <strong>', $post['poster']['link'], ' </strong> ', $txt['on'], '<em> ', $post['time'], '</em>&nbsp;&#187;</span>
+						<span class="smalltext">', $txt['last_post'], ' ', $txt['by'], ' <strong>', $post['poster']['link'], ' </strong> ', $txt['on'], '<em> ', $post['time'], '</em></span>
 					</div>
 					<div class="list_posts">', $post['message'], '</div>
 				</div>';
@@ -77,7 +77,7 @@ function template_main()
 
 	echo '
 		<div class="pagesection">
-			<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 		</div>
 	</div>';
 }
@@ -123,7 +123,7 @@ function template_unread()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+				<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 
 		echo '
@@ -233,7 +233,7 @@ function template_unread()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+				<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 	}
 	else
@@ -307,7 +307,7 @@ function template_replies()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+				<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 
 		echo '
@@ -410,7 +410,7 @@ function template_replies()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ' ', $context['page_index'], '</span>
+				<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
 			</div>';
 	}
 	else
