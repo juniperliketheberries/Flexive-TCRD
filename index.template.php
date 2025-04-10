@@ -409,7 +409,7 @@ function template_menu()
 	$prevent_actions = array('search','profile','logout','login','register');
 
 	// Custom 'messages' style
-	if ($context['user']['is_logged'] && $context['user']['unread_messages'] > 0 && isset($context['menu_buttons']['pm'])) 
+	if ($context['user']['is_logged'] && isset($context['menu_buttons']['pm'])) 
 	{
 		$context['menu_buttons']['pm']['alttitle'] = stylized_action_number($txt['pm_short'], $context['user']['unread_messages']);
 		$context['menu_buttons']['pm']['title'] = stylized_action_number($txt['pm_short'], $context['user']['unread_messages']);
