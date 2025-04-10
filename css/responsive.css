@@ -106,10 +106,6 @@
 	{
 		display: none !important;
 	}
-	#forumposts .messageicon
-	{
-		display: none;
-	}
 	.poster li.avatar
 	{
 		display: none;
@@ -482,6 +478,12 @@
 	{
 		margin: 0.9em 0 0 0 !important;
 		float: left !important;
+	}
+	.pagesection
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.keyinfo
 	{
