@@ -100,6 +100,12 @@ form
 	.input_file    - covers input[type=file] throughout all browsers
 */
 
+/* All input fields should have the same rounded corners */
+input, textarea
+{
+	border-radius: 3px !important;
+}
+
 input, button, select, textarea
 {
 	font: 95%/115% verdana, Helvetica, sans-serif;
@@ -155,8 +161,8 @@ input.input_check, input.input_radio
 {
 	border: none;
 	background: none;
-	width: 18px;
-	height: 18px;
+	width: 18px !important;
+	height: 18px !important;
 	margin: 4px !important;
 }
 h3.catbg input.input_check
@@ -2780,12 +2786,10 @@ fieldset.merge_options
 .login dt, .login dd
 {
 	margin: 0 0 0.4em 0;
-	width: 44%;
+	width: 50%;
 	padding: 0.1em;
-}
-.login dt input, .login dd input 
-{
-	height: 24px !important;
+	height: 30px !important;
+	align-content: center;
 }
 .login dt
 {
@@ -2796,12 +2800,12 @@ fieldset.merge_options
 }
 .login dd
 {
-	width: 54%;
 	float: right;
 	text-align: left;
 }
-.login dd input {
-	width: 54%;
+.login input
+{
+	height: 100%;
 }
 .login p
 {

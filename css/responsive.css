@@ -318,12 +318,6 @@
 		float: none;
 		text-align: left;
 	}
-	.login dt, .login dd
-	{
-		float: none;
-		text-align: left;
-		width: 90%;
-	}
 	input.enhanced
 	{
 		display: block;
