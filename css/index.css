@@ -1657,19 +1657,36 @@ div#upper_section div.news form
 }
 
 /* Topic Action Buttons */
-ul.nav-pills li a {
+ul.nav-pills
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+ul.nav-pills li
+{
+	margin-left: 4px;
+	margin-bottom: 4px;
+}
+
+ul.nav-pills li a 
+{
 	background-color: white;
 	text-transform: uppercase;
   	font-weight: bold;
   	font-size: 0.9em;
+	text-align: center;
 }
 
-ul.nav-pills li a:hover {
+ul.nav-pills li a:hover 
+{
 	background-color: var(--red);
 	color: white;
 }
 
-ul.nav-pills li a:active {
+ul.nav-pills li a:active 
+{
 	background-color: var(--dark-red);
 }
 
@@ -1692,6 +1709,11 @@ ul.nav-pills li.active a:active
 {
 	background-color: var(--light-pink);
 	color: #333;
+}
+
+ul.nav-pills li a .hidden-xs 
+{
+	display: block !important;
 }
 
 /* The footer wih copyright links etc. */
