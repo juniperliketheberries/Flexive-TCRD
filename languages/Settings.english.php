@@ -3,8 +3,8 @@
 
 global $settings;
 
-$txt['theme_thumbnail_href'] = $settings['images_url'] . '/thumbnail.png';
-$txt['theme_description'] = 'Flexive.<br><br>Author: <a href="https://smftricks.com">SMF Tricks Team</a>';
+$txt['theme_thumbnail_href'] = $settings['images_url'] . '/thumbnail.gif';
+$txt['theme_description'] = 'A custom theme for Tri-City Roller Derby which supports desktop and mobile<br><br>Original Author: <a href="https://smftricks.com">SMF Tricks Team</a><br>Updated By: <a href="https://github.com/dainglis/Flexive-TCRD">Gin & Toxic</a>';
 
 $txt['st_enable_header_background'] = 'Enable header background image';
 $txt['st_enable_header_background_desc'] = 'It will allow you to use an image as the header background';

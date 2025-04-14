@@ -388,7 +388,7 @@ function theme_linktree($force_show = false, $index=false, $quicklinks=false)
 
 // Theme copyright, please DO NOT REMOVE THIS!
 function flexive_copy() {
-	$flexive = 'Theme by <a href="https://smftricks.com">SMF Tricks</a>';
+	$flexive = '<a href="https://github.com/dainglis/Flexive-TCRD">TCRD Flex</a> theme modified by Gin & Toxic';
 
 	return $flexive;
 }
