@@ -417,12 +417,12 @@
 	.navbar-nav .dropdown-menu li a
 	{
 		padding-left: 16px !important;
-		color: #ebebeb !important;
+		color: white !important;
 		background-color: var(--dark-red) !important;
 	}
 	.navbar-nav .dropdown-menu li a:hover
 	{
-		color: #FFFFFF !important;
+		color: white !important;
 		background-color: var(--dark-red) !important;
 	}
 	.msearch_details
@@ -455,6 +455,7 @@
 		height: auto !important;
 		width: 100%;
 		white-space: normal !important;
+		margin-left: 0px !important;
 	}
 	#adm_submenus
 	{

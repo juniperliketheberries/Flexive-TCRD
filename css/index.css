@@ -1705,6 +1705,11 @@ ul.nav-pills li.active a:active
 	background-color: var(--grey20);
 }
 
+ul.nav-pills li.dropdown li.addM
+{
+	float: left;
+}
+
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
 {
 	background-color: var(--light-pink);
