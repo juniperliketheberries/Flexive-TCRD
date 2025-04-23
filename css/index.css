@@ -2,18 +2,36 @@
 ------------------------------------------------------- */
 
 :root {
-	--off-white: #F5F5F5;
+	--background-primary: var(--off-white);
+	--background-secondary: white;
+	--background-tertiary: white;
+	--header-primary: black;
+	--header-secondary: black;
+	--text-primary: var(--grey27);
+	--text-secondary: green;
+	--text-link: blue;
+	--text-link-alt: var(--grey20);
+	--accent-primary: var(--red);
+	--accent-secondary: var(--dark-red);
+	--accent-tertiary: red;
+	--accent-subtle: var(--light-pink);
+	--accent-subtle-2: var(--salmon);
+
+	/* Specific Colors */
+	--off-white: #F2F2F2;
+	--also-white: #FFFDFD;
 	--light-pink: #F2ECEC;
 	--salmon: #EECFCF;
 	--red: #B24344;
 	--dark-red: #7F3031;
+	--grey27: #444;
 	--grey20: #333;
 }
 
 /* Normal, standard links. */
 a:link, a:visited
 {
-	color: #333;
+	color: var(--text-link-alt);
 	text-decoration: none;
 }
 a:hover
@@ -25,7 +43,7 @@ a:hover
 /* Links that open in a new window. */
 a.new_win:link, a.new_win:visited
 {
-	color: #333;
+	color: var(--text-link-alt);
 	text-decoration: none;
 }
 a.new_win:hover
@@ -35,12 +53,12 @@ a.new_win:hover
 
 .btn-primary
 {
-	background-color: var(--red)
+	background-color: var(--accent-primary)
 }
 
 .btn-primary:hover, .btn-primary:focus
 {
-	background-color: var(--dark-red);
+	background-color: var(--accent-secondary);
 	border: 0 !important;
 	border-bottom: 2px solid rgba(0,0,0,.2) !important;
 }
@@ -54,7 +72,7 @@ table
 /* Set a fontsize that will look the same in all browsers. */
 body
 {
-	background: #f2f2f2 url(../images/theme/backdrop.png) repeat scroll 0 0;
+	background: var(--background-primary) url(../images/theme/backdrop.png) repeat scroll 0 0;
 	font: 85%/130% "Verdana", "Arial", "Helvetica", sans-serif;
 	margin: 0 auto;
 	padding: 0;
@@ -69,7 +87,7 @@ body#help_popup
 /* use dark grey for the text, leaving #000 for headers etc */
 body, td, th, tr
 {
-	color: #444;
+	color: var(--text-primary)
 }
 
 /* This division wraps the entire forum when a forum width is set. */
@@ -88,7 +106,7 @@ form
 
 .form-control:focus
 {
-	border-color: var(--dark-red)
+	border-color: var(--accent-secondary)
 }
 
 /* We can style the different types of input buttons to be uniform throughout different browsers and their color themes.
@@ -109,6 +127,7 @@ input, textarea
 
 input, button, select, textarea
 {
+	/* TODO input */
 	font: 95%/115% verdana, Helvetica, sans-serif;
 	color: #000;
 	background: #fff;
@@ -137,6 +156,7 @@ textarea
 /* Buttons should be styled a bit differently, in order to make them look more button'ish. */
 .button_submit, .button_reset
 {
+	/* TODO button */
 	background: #cde7ff url(../images/theme/submit_bg.png) no-repeat;
 	border: 1px solid #aaa;
 	cursor: pointer;
@@ -174,6 +194,7 @@ h3.catbg input.input_check
 /* Give disabled text input elements a different background color. */
 input[disabled].input_text
 {
+	/* TODO input */
 	background-color: #eee;
 }
 
@@ -189,7 +210,7 @@ hr, .hrcolor
 /* By default set the color on these tags as #000. */
 h1, h2, h3, h4, h5, h6
 {
-	color: #000;
+	color: var(--header-primary);
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
@@ -519,18 +540,18 @@ tr.catbg th a:link, tr.catbg th a:visited, tr.catbg2 td a:link, tr.catbg2 td a:v
 /* Alternating backgrounds for posts, and several other sections of the forum. */
 .windowbg, #preview_body
 {
-	color: #000;
-	background-color: var(--off-white);
+	color: var(--header-primary);
+	background-color: var(--background-primary);
 }
 .windowbg2
 {
-	color: #000;
-	background-color: #FFFDFD;
+	color: var(--header-primary);
+	background-color: var(--background-secondary);
 }
 .windowbg3
 {
-	color: #000;
-	background-color: var(--off-white);
+	color: var(--header-primary);
+	background-color: var(--background-tertiary);
 }
 
 /* the page navigation area */
