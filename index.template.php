@@ -182,6 +182,8 @@ function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
+	$context['header_logo_url_html_safe'] = "https://tricityrd.com/static/images/TCRD-logo-white.png";
+
 	// Show the menu here, according to the menu sub template.
 	template_menu();
 

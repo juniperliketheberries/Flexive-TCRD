@@ -2,15 +2,32 @@
 ------------------------------------------------------- */
 
 :root {
-	--background-primary: var(--off-white);
-	--background-secondary: white;
-	--background-tertiary: white;
+	/* --background-primary: var(--off-white);
+	--background-secondary: var(--light-pink);
+	--background-tertiary: var(--light-pink);
 	--header-primary: black;
 	--header-secondary: black;
 	--text-primary: var(--grey27);
 	--text-secondary: green;
 	--text-link: blue;
 	--text-link-alt: var(--grey20);
+	--button-primary: white;
+	--accent-primary: var(--red);
+	--accent-secondary: var(--dark-red);
+	--accent-tertiary: red;
+	--accent-subtle: var(--light-pink);
+	--accent-subtle-2: var(--salmon); */
+
+	--background-primary: var(--grey20);
+	--background-secondary: var(--grey10);
+	--background-tertiary: var(--grey27);
+	--header-primary: white;
+	--header-secondary: white;
+	--text-primary: var(--grey90);
+	--text-secondary: green;
+	--text-link: var(--red);
+	--text-link-alt: var(--salmon);
+	--button-primary: var(--grey10);
 	--accent-primary: var(--red);
 	--accent-secondary: var(--dark-red);
 	--accent-tertiary: red;
@@ -24,14 +41,16 @@
 	--salmon: #EECFCF;
 	--red: #B24344;
 	--dark-red: #7F3031;
+	--grey90: #E6E6E6;
 	--grey27: #444;
 	--grey20: #333;
+	--grey10: #1A1A1A;
 }
 
 /* Normal, standard links. */
 a:link, a:visited
 {
-	color: var(--text-link-alt);
+	color: var(--text-link);
 	text-decoration: none;
 }
 a:hover
@@ -43,7 +62,7 @@ a:hover
 /* Links that open in a new window. */
 a.new_win:link, a.new_win:visited
 {
-	color: var(--text-link-alt);
+	color: var(--text-link);
 	text-decoration: none;
 }
 a.new_win:hover
@@ -1575,7 +1594,7 @@ div#upper_section div.news form
 {
 	padding: 13px 15px;
 	margin: 0 0 0 0;
-	background-color: #F2ECEC;
+	background-color: var(--background-secondary);
 	border-color: transparent transparent #c2c2c2;
 	border-style: solid;
 	border-width: 1px 0;
@@ -1608,7 +1627,7 @@ div#upper_section div.news form
 /* Navbar */
 .navbar 
 {
-	background: var(--dark-red);
+	background: var(--accent-secondary);
 	min-height: 32px !important;
 }
 .navbar-brand 
@@ -1694,7 +1713,7 @@ ul.nav-pills li
 
 ul.nav-pills li a 
 {
-	background-color: white;
+	background-color: var(--button-primary);
 	text-transform: uppercase;
   	font-weight: bold;
   	font-size: 0.9em;
@@ -1703,23 +1722,23 @@ ul.nav-pills li a
 
 ul.nav-pills li a:hover 
 {
-	background-color: var(--red);
+	background-color: var(--accent-primary);
 	color: white;
 }
 
 ul.nav-pills li a:active 
 {
-	background-color: var(--dark-red);
+	background-color: var(--accent-secondary);
 }
 
 ul.nav-pills li.active a
 {
-	background-color: var(--red);
+	background-color: var(--accent-primary);
 }
 
 ul.nav-pills li.active a:hover
 {
-	background-color: var(--dark-red);
+	background-color: var(--accent-secondary);
 }
 
 ul.nav-pills li.active a:active
@@ -4010,14 +4029,14 @@ span.hidelink
 }
 .header-normal {
 	height: 160px;
-	background-color: var(--off-white);
+	background-color: var(--background-primary);
 	padding: 20px 5px;
 }
 
 .footer-main {
 	margin: 10px 0 0;
 	padding: 20px 10px;
-	background-color: var(--light-pink);
+	background-color: var(--background-secondary);
 	border-color: transparent transparent #c2c2c2;
 	border-style: solid;
 	border-width: 1px 0 0;
