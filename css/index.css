@@ -900,10 +900,10 @@ div.cat_bar
 	padding: 0 5px;
 	border-radius: 4px 4px 0 0;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
-	border: 1px inset rgba(0,0,0,0.2);
+	/* border: 1px inset rgba(0,0,0,0.2); */
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 	box-sizing: border-box;
-	margin-bottom: 1px;
+	margin-bottom: 0%;
 }
 div.title_bar
 {
@@ -911,7 +911,7 @@ div.title_bar
 	padding: 0 9px;
 	height: 40px;
 	overflow: hidden;
-	margin-bottom: 1px;
+	margin-bottom: 0px;
 	border-radius: 3px;
 	border: 1px solid rgba(150,150,150,0.2);
 }
@@ -923,7 +923,7 @@ div.title_barIC
 	padding: 0 9px;
 	height: 40px;
 	overflow: hidden;
-	margin-bottom: 1px;
+	margin-bottom: 0px;
 	border-radius: 3px;
 	border: 1px solid rgba(150,150,150,0.2);
 }
@@ -1002,8 +1002,8 @@ table.table_grid
 table.table_grid td
 {
 	padding: 3px;
-	border-bottom: 1px solid var(--off-white);
-	border-right: 1px solid var(--off-white);
+	border-bottom: 1px dashed var(--dark-red);
+	border-right: none;
 }
 
 /* GenericList */
@@ -3951,10 +3951,16 @@ span.hidelink
 }
 .boards-box {
 	background-color: var(--off-white);
-	padding: 2px 5px 5px;
+	/* padding: 2px 5px 5px; */
+	padding: 0px;
 	border-width: 0 1px 1px;
 	border-style: solid;
 	border-color: #ccc;
+}
+.boards-box .table_list tbody > tr + tr {
+	border-width: 1px 0 0 0;
+	border-style: dotted;
+	border-color: var(--dark-red);
 }
 .header-main {
 	height: 150px;
