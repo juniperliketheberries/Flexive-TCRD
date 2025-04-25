@@ -2,6 +2,7 @@
 ------------------------------------------------------- */
 
 :root {
+	/* Light Theme */
 	/* --background-primary: var(--off-white);
 	--background-secondary: var(--light-pink);
 	--background-tertiary: var(--light-pink);
@@ -18,33 +19,53 @@
 	--accent-subtle: var(--light-pink);
 	--accent-subtle-2: var(--salmon); */
 
-	--background-primary: var(--grey20);
-	--background-secondary: var(--grey10);
-	--background-tertiary: var(--grey27);
+	/* Dark Theme */
+	--background-primary: var(--grey10);
+	--background-secondary: var(--grey13-material);
+	--background-tertiary: var(--grey27-material);
 	--header-primary: white;
 	--header-secondary: white;
-	--text-primary: var(--grey90);
-	--text-secondary: green;
-	--text-link: var(--red);
-	--text-link-alt: var(--salmon);
-	--button-primary: var(--grey10);
-	--accent-primary: var(--red);
-	--accent-secondary: var(--dark-red);
-	--accent-tertiary: red;
-	--accent-subtle: var(--light-pink);
-	--accent-subtle-2: var(--salmon);
+	--text-primary: var(--light-brown);
+	--text-secondary: var(--grey62-material);
+	--text-link: white;
+	--text-link-alt: var(--grey38-material);
+	--navigation-primary: var(--dark-red);
+	--button-primary: var(--grey20);
+	--accent-primary: var(--dark-red);
+	--accent-secondary: var(--darker-red);
+	/* --accent-tertiary: var(--darker-red); */
+	--subtle-primary: var(--light-pink);
+	--subtle-secondary: var(--salmon-material);
+	--post-primary: var(--grey13-material);
+	--post-secondary: var(--grey13-material);
+	--post-tertiary:white;
+	--post-sticky-primary: var(--darker-red);
+	--post-sticky-secondary: var(--darker-red);
+	--post-locked-primary: var(--darker-red);
+	--post-locked-secondary: var(--darker-red);
+
 
 	/* Specific Colors */
-	--off-white: #F2F2F2;
-	--also-white: #FFFDFD;
-	--light-pink: #F2ECEC;
-	--salmon: #EECFCF;
-	--red: #B24344;
-	--dark-red: #7F3031;
-	--grey90: #E6E6E6;
-	--grey27: #444;
-	--grey20: #333;
-	--grey10: #1A1A1A;
+	--off-white: 		#F2F2F2;
+	--also-white: 		#FFFDFD;
+	--light-pink: 		#F2ECEC;
+	--pink-material: 	#FFCDD2;
+	--salmon-material:	#EF9A9A;
+	--red:				#B14E4f;
+	--dark-red: 		#7F3031;
+	--darker-red:		#541f1f;
+	--red-material: 	#C62828;
+	--dark-red-material:#B71C1C;
+	--lightest-brown: 	#EFEBE9;
+	--light-brown:		#D7CCC8;
+	--grey88-material:	#E0E0E0;
+	--grey68:			#AEAEAE;
+	--grey62-material:	#9E9E9E;
+	--grey38-material:	#616161;
+	--grey27-material:	#424242;
+	--grey20: 			#333333;
+	--grey13-material:	#212121;
+	--grey10: 			#1A1A1A;
 }
 
 /* Normal, standard links. */
@@ -91,7 +112,8 @@ table
 /* Set a fontsize that will look the same in all browsers. */
 body
 {
-	background: var(--background-primary) url(../images/theme/backdrop.png) repeat scroll 0 0;
+	/* background: var(--background-primary) url(../images/theme/backdrop.png) repeat scroll 0 0; */
+	background: var(--background-primary);
 	font: 85%/130% "Verdana", "Arial", "Helvetica", sans-serif;
 	margin: 0 auto;
 	padding: 0;
@@ -106,7 +128,7 @@ body#help_popup
 /* use dark grey for the text, leaving #000 for headers etc */
 body, td, th, tr
 {
-	color: var(--text-primary)
+	color: var(--text-primary) !important;
 }
 
 /* This division wraps the entire forum when a forum width is set. */
@@ -398,7 +420,7 @@ blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 /* Alterate blockquote stylings */
 blockquote.bbc_standard_quote
 {
-	background-color: var(--salmon);
+	background-color: var(--salmon-material);
 }
 blockquote.bbc_alternate_quote
 {
@@ -417,7 +439,7 @@ code.bbc_code
 	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
 	font-size: small;
 	color: #333;
-	background: var(--salmon);
+	background: var(--salmon-material);
 	border-bottom: 2px solid var(--red);
 	line-height: 1.5em;
 	padding: 3px 1em;
@@ -532,7 +554,7 @@ code.bbc_code
 	font-family: arial, helvetica, sans-serif;
 	font-size: 1.1em;
 	font-weight: bold;
-	background: var(--red);
+	background: var(--accent-primary);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -560,17 +582,17 @@ tr.catbg th a:link, tr.catbg th a:visited, tr.catbg2 td a:link, tr.catbg2 td a:v
 .windowbg, #preview_body
 {
 	color: var(--header-primary);
-	background-color: var(--background-primary);
+	background-color: var(--post-primary);
 }
 .windowbg2
 {
 	color: var(--header-primary);
-	background-color: var(--background-secondary);
+	background-color: var(--post-secondary);
 }
 .windowbg3
 {
 	color: var(--header-primary);
-	background-color: var(--background-tertiary);
+	background-color: var(--post-tertiary);
 }
 
 /* the page navigation area */
@@ -618,22 +640,22 @@ a.navPages
 /* Sticky topics get a different background */
 .stickybg
 {
-	background: #DDB6B6;
+	background: var(--post-sticky-primary);
 }
 .stickybg2
 {
-	background: var(--salmon);
+	background: var(--post-sticky-secondary);
 }
 
 /* Locked posts get a different shade, too! */
 .lockedbg
 {
-	background: #CECECE;
+	background: var(--post-locked-primary);
 	font-style: italic;
 }
 .lockedbg2
 {
-	background: #DBDBDB;
+	background: var(--post-locked-secondary);
 	font-style: italic;
 }
 
@@ -679,7 +701,7 @@ a.navPages
 }
 .alert-danger
 {
-	background-color: var(--salmon);
+	background-color: var(--salmon-material);
 	border-color: var(--dark-red);
 	border-radius: 12px;
 }
@@ -891,7 +913,7 @@ h3.catbg2 a, h3.catbg2
 }
 h3.catbg a:hover, h4.catbg a:hover, .table_list tbody.header td a:hover
 {
-	color: #fd9;
+	color: var(--text-link-alt);
 	text-decoration: none;
 }
 h3.catbg2 a:hover
@@ -918,9 +940,10 @@ h4.catbg a.toggle img
 	vertical-align: middle;
 	margin: -2px 5px 0 5px;
 }
-h4.catbg, h4.catbg2 , h3.catbg , h3.catbg2 , .table_list tbody.header td.catbg
+h4.catbg, h4.catbg2, h3.catbg, h3.catbg2, 
+.table_list tbody.header td.catbg
 {
-	background: var(--red);
+	background: var(--accent-primary);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
@@ -936,11 +959,10 @@ h4.titlebg img.icon
 }
 div.cat_bar
 {
-	background: var(--red);
+	background: var(--accent-primary);
 	padding: 0 5px;
 	border-radius: 4px 4px 0 0;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
-	/* border: 1px inset rgba(0,0,0,0.2); */
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 	box-sizing: border-box;
 	margin-bottom: 0%;
@@ -1006,13 +1028,11 @@ table.table_list a.collapse
 }
 tr.catbg th.first_th
 {
-	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
 tr.catbg th.last_th
 {
-	background: var(--red);
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -1595,7 +1615,7 @@ div#upper_section div.news form
 	padding: 13px 15px;
 	margin: 0 0 0 0;
 	background-color: var(--background-secondary);
-	border-color: transparent transparent #c2c2c2;
+	border-color: transparent transparent var(--accent-secondary);
 	border-style: solid;
 	border-width: 1px 0;
 	margin: 0 0 10px;
@@ -1627,7 +1647,7 @@ div#upper_section div.news form
 /* Navbar */
 .navbar 
 {
-	background: var(--accent-secondary);
+	background: var(--navigation-primary);
 	min-height: 32px !important;
 }
 .navbar-brand 
@@ -1713,6 +1733,7 @@ ul.nav-pills li
 
 ul.nav-pills li a 
 {
+	color: var(--text-primary);
 	background-color: var(--button-primary);
 	text-transform: uppercase;
   	font-weight: bold;
@@ -4007,12 +4028,7 @@ span.hidelink
 	min-width: 300px;
 }
 .boards-box {
-	background-color: var(--off-white);
-	/* padding: 2px 5px 5px; */
 	padding: 0px;
-	border-width: 0 1px 1px;
-	border-style: solid;
-	border-color: #ccc;
 }
 .boards-box .table_list tbody > tr + tr {
 	border-width: 1px 0 0 0;
