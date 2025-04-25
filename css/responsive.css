@@ -223,7 +223,7 @@
 	}
 	#posting_icons, #mlist th
 	{
-		/* display: none; */
+		display: none;
 	}
 	table.table_list tbody.content td.lastpost, .topic_table table tbody tr td.lastpost
 	{
