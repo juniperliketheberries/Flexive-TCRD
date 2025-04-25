@@ -269,7 +269,7 @@ em
 /* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
 .smalltext, tr.smalltext th
 {
-	font-size: 0.85em;
+	font-size: 0.8em;
 	font-family: verdana, sans-serif;
 }
 .middletext
@@ -1571,6 +1571,7 @@ div#upper_section div.news form
 	list-style: none;
 	clear: both;
 	width: 100%;
+	line-height: 180%;
 }
 .navigate_section ul li
 {
@@ -1707,7 +1708,7 @@ ul.nav-pills li.active a:active
 
 ul.nav-pills li.dropdown li.addM
 {
-	float: left;
+	/* float: left; */
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
@@ -1804,8 +1805,9 @@ table.table_list tbody.content td.icon
 /* the board title! */
 .table_list tbody.content td.info a.subject
 {
-	font-size: 110%;
 	color: var(--red);
+	font-size: 135%;
+	line-height: 130%;
 }
 .table_list tbody.content td.children
 {
@@ -1843,7 +1845,7 @@ p.board-description {
 }
 #posting_icons ul li 
 {
-	padding: 4px 18px;
+	padding: 4px 8px;
 }
 #posting_icons img
 {
@@ -1886,7 +1888,7 @@ p.board-description {
 }
 .mark_read
 {
-	padding: 0 0.5em;
+	/* padding: 0 0.5em; */
 }
 
 /* the newsfader */
@@ -2234,7 +2236,8 @@ ul.quickbuttons li.like_button, ul.quickbuttons li.unlike_button
 .poster h4
 {
 	margin: 0.2em 0 0.4em 1.1em;
-	font-size: 120%;
+	font-size: 125%;
+	line-height: 110%;
 }
 .poster h4, .poster h4 a
 {
@@ -2309,7 +2312,7 @@ ul.quickbuttons
 	clear: right;
 	float: right;
 	text-align: right;
-	font: bold 0.85em arial, sans-serif;
+	font: bold 0.8em arial, sans-serif;
 }
 ul.quickbuttons li
 {
@@ -2678,6 +2681,10 @@ ul.post_options li
 {
 	clear: both;
 }
+#recent h3.catbg
+{
+	height: inherit;
+}
 
 /* Styles for inline labels */
 
@@ -2964,6 +2971,15 @@ tr.titlebg td
 	padding: 0 0 1em 0;
 }
 
+/* Manage boards in admin menu, overrides admin.css */
+
+#manage_boards li 
+{
+	border: 1px solid var(--background-tertiary) !important;
+	padding: 0 8px !important;
+	margin: 0px !important;
+}
+
 /* Styles for sidebar menus.
 ------------------------------------------------------- */
 .left_admmenu, .left_admmenu ul, .left_admmenu li
@@ -3041,7 +3057,8 @@ tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td
 /* the subject column */
 .topic_table td
 {
-	font-size: 1em;
+	font-size: 110%;
+	line-height: 155%;
 }
 .topic_table td.subject p, .topic_table td.stats
 {
