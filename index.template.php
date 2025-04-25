@@ -364,7 +364,9 @@ function theme_linktree($force_show = false, $index=false, $quicklinks=false)
 
 		echo '
 			<li class="quicklinks"><a href="', $scripturl, '?action=unread">', $txt['unread_since_visit'], '</a></li>
-			<li class="quicklinks"><a href="', $scripturl, '?action=unreadreplies">', $txt['show_unread_replies'], '</a></li>';
+			<li class="quicklinks"><a href="', $scripturl, '?action=unreadreplies">', $txt['show_unread_replies'], '</a></li>
+			<li class="quicklinks"><a href="', $scripturl, '?action=pm">', $txt['pm_menu_read'], '</a>', (($context['user']['unread_messages'] == 0) ? '' : '   <span class="label label-primary">' . $context['user']['unread_messages'] . '</span>'), '</li>';
+
 
 		// Are there any members waiting for approval?
 		if (!empty($context['unapproved_members']))
