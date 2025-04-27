@@ -425,6 +425,10 @@
 		color: white !important;
 		background-color: var(--dark-red) !important;
 	}
+	.navbar-inverse .navbar-nav .open .dropdown-menu .divider 
+	{
+		background-color: white;
+	}
 	.msearch_details
 	{
 		float: none !important;

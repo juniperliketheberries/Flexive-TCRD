@@ -1,4 +1,5 @@
-/* Styles for the general looks for the Curve theme.
+/* Styles for the general looks for the TCRD Flex theme
+ * in both light and dark modes
 ------------------------------------------------------- */
 
 :root {
@@ -23,6 +24,8 @@
 	--background-primary: var(--grey10);
 	--background-secondary: var(--grey13-material);
 	--background-tertiary: var(--grey27-material);
+	--dropdown-primary: var(--grey20);
+	--dropdown-secondary: var(--grey13-material);
 	--header-primary: white;
 	--header-secondary: var(--red);
 	--header-primary-hover: var(--grey68);
@@ -35,6 +38,7 @@
 	--text-link-secondary-alt: var(--dark-red);
 	--label-primary: var(--red);
 	--navigation-primary: var(--dark-red);
+	--navigation-secondary: white;
 	--button-primary: var(--grey20);
 	--button-secondary: var(--grey13-material);
 	--button-tertiary: var(--grey10);
@@ -158,6 +162,14 @@ form
 	border-color: var(--accent-secondary)
 }
 
+/* Overall styling for color-themed forms */
+.form-control
+{
+	color: var(--text-secondary);
+	background-color: var(--background-primary);
+	border: 1px solid var(--background-tertiary);
+}
+
 /* We can style the different types of input buttons to be uniform throughout different browsers and their color themes.
 	.button_submit - covers input[type=submit], input[type=button], button[type=submit] and button[type=button] in all browsers
 	.button_reset  - covers input[type=reset] and button[type=reset] throughout all browsers
@@ -176,10 +188,9 @@ input, textarea
 
 input, button, select, textarea
 {
-	/* TODO input */
 	font: 95%/115% verdana, Helvetica, sans-serif;
-	color: #000;
-	background: #fff;
+	color: var(--text-primary);
+	background: var(--background-primary);
 	border: 1px solid #7f9db9;
 	padding: 2px;
 }
@@ -340,13 +351,13 @@ em
 .smalltext, tr.smalltext th
 {
 	font-size: 0.8em;
-	font-family: verdana, sans-serif;
+	/* font-family: verdana, sans-serif; */
 }
 .middletext
 {
 	font-size: 0.9em;
 	line-height: 1em;
-	font-family: verdana, sans-serif;
+	/* font-family: verdana, sans-serif; */
 }
 .normaltext
 {
@@ -1658,15 +1669,18 @@ div#upper_section div.news form
 	padding: 10px 10px !important;
 	height: 42px;
 	line-height: 22px;
+	color: var(--header-primary) !important;
 }
-.navbar-nav .dropdown:hover 
+.navbar-nav > li > .dropdown-menu
 {
-	color: var(--red);
+	border-radius: 0px !important;
 }
+/* navbar-specific dropdown entries */
 .navbar-nav .dropdown-menu li a
 {
 	font-size: 12px;
 	font-weight: bold;
+	text-transform: uppercase !important;
 }
 .navbar .navbar-nav > li > a:focus, 
 .navbar .navbar-nav > li > a:hover,
@@ -1674,7 +1688,8 @@ div#upper_section div.news form
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus
 {
-	box-shadow: inset 0 -5px 0 0 var(--light-pink);
+	/* navbar indicator, should match text */
+	box-shadow: inset 0 -5px 0 0 var(--header-primary);
 }
 .navbar .navbar-nav li.userinf a
 {
@@ -1692,21 +1707,28 @@ div#upper_section div.news form
 .dropdown-menu
 {
 	padding: 0px;
+  	border-radius: 8px;
+  	border-color: var(--background-tertiary);
+  	background: var(--dropdown-primary);
+  	overflow: clip;
 }
+/* generic dropdown entries */
 .dropdown-menu li a 
 {
-	padding: 8px 20px;
-	color: var(--grey20) !important;
-	background-color: #FFF !important;
+	color: var(--header-primary) !important;
+	background-color: var(--dropdown-primary) !important;
+	padding: 10px 20px;
+	text-align: left !important;
 	text-transform: capitalize !important;
 }
 .dropdown-menu li a:hover 
 {
-	background-color: var(--light-pink) !important;
+	background-color: var(--dropdown-secondary) !important;
 }
 .dropdown-menu .divider 
 {
 	margin: 0px;
+	background-color: var(--background-tertiary)
 }
 .navbar-nav .search-label
 {
@@ -1765,7 +1787,7 @@ ul.nav-pills li.active a:active
 
 ul.nav-pills li.dropdown li.addM
 {
-	/* float: left; */
+	margin: 0px !important;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
@@ -2610,6 +2632,14 @@ ul.post_options li
 {
 	margin: 0 1px 0 0;
 	vertical-align: top;
+	  height: 24px;
+  	background-image: none !important;
+  	background-color: white;
+  	border-radius: 4px;
+}
+#bbcBox_message div img:hover 
+{
+	background-color: var(--grey68);
 }
 #bbcBox_message select
 {
