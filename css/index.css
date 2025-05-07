@@ -50,6 +50,8 @@
 	--post-primary: var(--grey20);
 	--post-secondary: var(--grey13-material);
 	--post-tertiary:white;
+	--quote-primary: var(--grey27-material);
+	--quote-secondary: var(--grey20);
 	--post-sticky-primary: var(--darker-red);
 	--post-sticky-secondary: var(--darker-red);
 	--post-locked-primary: var(--darker-red);
@@ -427,7 +429,7 @@ li.quicklinks a:hover {
 blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 {
 	font-size: small;
-	color: #000;
+	color: var(--text-primary);
 	line-height: 1.4em;
 	background: url(../images/theme/quote.png) 0.1em 0.1em no-repeat;
 	background-size: 1.5em;
@@ -439,16 +441,16 @@ blockquote.bbc_standard_quote, blockquote.bbc_alternate_quote
 /* Alterate blockquote stylings */
 blockquote.bbc_standard_quote
 {
-	background-color: var(--salmon-material);
+	background-color: var(--quote-primary);
 }
 blockquote.bbc_alternate_quote
 {
-	background-color: #f5f5f5;
+	background-color: var(--quote-secondary);
 }
 
 blockquote 
 {
-	border-left: 5px solid var(--red);
+	border-left: 5px solid var(--accent-primary);
 }
 
 /* A code block - maybe PHP ;). */
@@ -457,9 +459,9 @@ code.bbc_code
 	display: block;
 	font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
 	font-size: small;
-	color: #333;
-	background: var(--salmon-material);
-	border-bottom: 2px solid var(--red);
+	color: var(--text-primary);
+	background: var(--quote-primary);
+	border-bottom: 5px solid var(--accent-primary);
 	line-height: 1.5em;
 	padding: 3px 1em;
 	overflow: auto;
@@ -471,7 +473,7 @@ code.bbc_code
 /* The "Quote:" and "Code:" header parts... */
 .codeheader, .quoteheader
 {
-	color: #666;
+	color: var(--text-primary);
 	font-size: x-small;
 	font-weight: bold;
 	padding: 0 0.3em;
