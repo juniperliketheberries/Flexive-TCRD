@@ -105,6 +105,10 @@ a.new_win:hover
 	text-decoration: underline;
 }
 
+.btn 
+{
+	margin-top: 0px;
+}
 .btn-primary
 {
 	background-color: var(--accent-primary)
@@ -164,10 +168,15 @@ form
 	border-color: var(--accent-secondary)
 }
 
+.form-control::placeholder 
+{
+	color: var(--text-secondary);
+}
+
 /* Overall styling for color-themed forms */
 .form-control
 {
-	color: var(--text-secondary);
+	color: var(--text-primary);
 	background-color: var(--background-primary);
 	border: 1px solid var(--background-tertiary);
 }
@@ -218,9 +227,8 @@ textarea
 /* Buttons should be styled a bit differently, in order to make them look more button'ish. */
 .button_submit, .button_reset
 {
-	/* TODO button */
-	background: #cde7ff url(../images/theme/submit_bg.png) no-repeat;
-	border: 1px solid #aaa;
+	/* background: #cde7ff url(../images/theme/submit_bg.png) no-repeat; */
+	/* border: 1px solid #aaa; */
 	cursor: pointer;
 	font-weight: normal;
 }
@@ -230,8 +238,8 @@ input:hover, textarea:hover, button:hover, select:hover
 }
 .button_submit:hover, .button_reset:hover
 {
-	border: 1px solid #aaa;
-	background: url(../images/theme/submit_bg.png) no-repeat 0 -140px #cde7ff;
+	/* border: 1px solid #aaa; */
+	/* background: url(../images/theme/submit_bg.png) no-repeat 0 -140px #cde7ff; */
 }
 input:focus, textarea:focus, button:focus, select:focus
 {
@@ -259,6 +267,13 @@ input[disabled].input_text
 	/* TODO input */
 	background-color: #eee;
 }
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control {
+	cursor: not-allowed;
+	background-color: var(--background-primary);
+	opacity: 0.5;
+  }
 
 /* Standard horizontal rule.. ([hr], etc.) */
 hr, .hrcolor
@@ -288,7 +303,7 @@ fieldset
 fieldset legend
 {
 	font-weight: bold;
-	color: #444;
+	color: var(--header-primary);
 }
 /* No image should have a border when linked. */
 a img
@@ -695,7 +710,7 @@ a.navPages
 	overflow: auto;
 	clear: right;
 	padding: 1em 0 3px 0;
-	border-top: 1px solid #aaa;
+	border-top: 1px solid var(--text-secondary);
 	line-height: 1.4em;
 	font-size: 0.85em;
 }
@@ -1236,19 +1251,29 @@ span.lowerframe span
 ------------------------------------------------------- */
 .auto_suggest_div
 {
-	border: 1px solid #000;
+	border: 1px solid var(--background-tertiary);
+	border-radius: 4px;
 	position: absolute;
 	visibility: hidden;
 }
+.auto_suggest_item, 
+.auto_suggest_item_hover
+{
+	padding: 6px;
+	color: var(--text-primary)
+}
 .auto_suggest_item
 {
-	background-color: #ddd;
+	background-color: var(--background-secondary);
 }
 .auto_suggest_item_hover
 {
-	background-color: #888;
+	background-color: var(--background-primary);
 	cursor: pointer;
-	color: #eee;
+}
+#toAddItemContainer
+{
+	padding: 8px;
 }
 
 /* Styles for the standard dropdown menus.
@@ -2294,7 +2319,7 @@ p#whoisviewing
 .like 
 {
 	margin: 0 1.5em 0 1.5em;
-	border-top: 1px #ccc solid;
+	border-top: 1px var(--text-secondary) solid;
 	padding-top: 0.65em;
 }
 .like strong
@@ -2464,7 +2489,7 @@ ul.quickbuttons li.inline_mod_check
 {
 	padding: 1em 1em 2px 0;
 	margin: 0 1em 0 0;
-	border-top: 1px solid #99a;
+	border-top: 1px solid var(--text-secondary);
 }
 img.smiley
 {
@@ -3321,7 +3346,7 @@ dl
 }
 .signature, .custom_fields_above_signature
 {
-	border-top: 1px #ccc solid;
+	border-top: 1px var(--text-secondary) solid;
 }
 .signature h5
 {
@@ -3718,7 +3743,7 @@ dl.stats dd
 .statsbar div.bar
 {
 	float: left;
-	background: var(--red);
+	background: var(--accent-primary);
 	border-radius: 4px;
 	display: block;
 	margin: 0 4px;
@@ -4239,5 +4264,9 @@ p.footer-load {
 }
 .fa-recentview:before {
 	content:"\f086"
+}
+.fa-results::before,
+.fa-vote::before {
+	content:"\f681"
 }
 /**** FontAwesome *****/
