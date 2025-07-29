@@ -80,6 +80,10 @@ function template_init()
 
 	/* Set the following variable to true if this theme requires the optional theme strings file to be loaded. */
 	$settings['require_theme_strings'] = true;
+
+	/* Use theme variants for dark & light mode */
+	$settings['theme_variants'] = array('light', 'dark');
+
 }
 
 // The main sub template above the content.
@@ -98,7 +102,10 @@ function template_html_above()
 	<link rel="stylesheet" href="', $settings['theme_url'], '/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="', $settings['theme_url'], '/css/responsive.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/variant', $context['theme_variant'], '.css?fin20" />
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index.css?fin20" />
+	';
+	
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
 	foreach (array('ie7', 'ie6', 'webkit') as $cssfix)
@@ -182,7 +189,7 @@ function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
-	$context['header_logo_url_html_safe'] = "https://tricityrd.com/static/images/TCRD-logo-white.png";
+	$context['header_logo_url_html_safe'] = $settings['images_url'] . "/logo" . $context['theme_variant'] . ".png";
 
 	// Show the menu here, according to the menu sub template.
 	template_menu();
