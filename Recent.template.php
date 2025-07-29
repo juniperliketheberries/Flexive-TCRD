@@ -16,14 +16,15 @@ function template_main()
 
 	echo '
 	<div id="recent" class="main_section">
+		<div class="pagesection">
+			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
+		</div>
 		<div class="cat_bar">
 			<h3 class="catbg">
 				<span class="ie6_header floatleft"><img src="', $settings['images_url'], '/post/xx.gif" alt="" class="icon" />',$txt['recent_posts'],'</span>
 			</h3>
 		</div>
-		<div class="pagesection">
-			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
-		</div>';
+		';
 
 	foreach ($context['posts'] as $post)
 	{
