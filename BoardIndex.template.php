@@ -135,15 +135,15 @@ function template_main()
 				// If the board or children is new, show an indicator.
 				if ($board['new'] || $board['children_new'])
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'on', $board['new'] ? '' : '2', '.png" alt="', $txt['new_posts'], '" title="', $txt['new_posts'], '" />';
+							<img src="', $settings['images_url'], '/on', $board['new'] ? '' : '2', '.png" alt="', $txt['new_posts'], '" title="', $txt['new_posts'], '" />';
 				// Is it a redirection board?
 				elseif ($board['is_redirect'])
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'redirect.png" alt="*" title="*" />';
+							<img src="', $settings['images_url'], '/redirect.png" alt="*" title="*" />';
 				// No new posts at all! The agony!!
 				else
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'off.png" alt="', $txt['old_posts'], '" title="', $txt['old_posts'], '" />';
+							<img src="', $settings['images_url'], '/off.png" alt="', $txt['old_posts'], '" title="', $txt['old_posts'], '" />';
 
 				echo '
 						</a>
@@ -253,9 +253,9 @@ function template_main()
 
 		echo '
 		<ul class="reset">
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_some.png" alt="" /> <span class="pi_text">', $txt['new_posts'], '</span></li>
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_none.png" alt="" /> <span class="pi_text">', $txt['old_posts'], '</span></li>
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_redirect.png" alt="" /> <span class="pi_text">', $txt['redirect_board'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_some.png" alt="" /> <span class="pi_text">', $txt['new_posts'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_none.png" alt="" /> <span class="pi_text">', $txt['old_posts'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_redirect.png" alt="" /> <span class="pi_text">', $txt['redirect_board'], '</span></li>
 		</ul>
 	</div>';
 
