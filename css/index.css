@@ -1012,7 +1012,7 @@ table.table_list a.collapse
 .table_grid tr.catbg, .table_grid tr.titlebg
 {
 	font-size: 0.95em;
-	border-bottom: 1px solid var(--background-secondary);
+	border-bottom: 0px;
 }
 .table_grid tr.catbg th, .table_grid tr.titlebg th
 {
@@ -1047,16 +1047,16 @@ tr.titlebg th.last_th
 }
 
 /* a general table class */
-table.table_grid
+table.table_grid tr + tr
 {
 	border-collapse: collapse;
 	margin-top: 0.1em;
+	border-top: 1px dashed var(--grey62-material);
 }
 table.table_grid td
 {
 	padding: 3px;
-	border-bottom: 1px dashed var(--dark-red);
-	border-right: none;
+	border: none;
 }
 
 /* GenericList */
@@ -2073,8 +2073,8 @@ div.table_frame .table_list
 #messageindex
 {
 	clear: both;
-	border-left: 1px solid var(--accent-primary);
-	border-right: 1px solid var(--accent-primary);
+	border: 1px solid var(--accent-primary);
+	border-top: 0px;
 }
 #messageindex a:hover
 {
@@ -3143,7 +3143,7 @@ tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td
 }
 .topic_table table thead
 {
-	border-bottom: 1px solid #fff;
+	border-bottom: 0px;
 }
 /* the subject column */
 .topic_table td
@@ -4080,9 +4080,8 @@ span.hidelink
 	border-top: 0px;
 }
 .boards-box .table_list tbody > tr + tr {
-	border-width: 1px 0 0 0;
-	border-style: dotted;
-	border-color: var(--dark-red);
+	border: 0px;
+	border-top: 1px dashed var(--grey62-material);
 }
 .header-main {
 	height: 150px;
