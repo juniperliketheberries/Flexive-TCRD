@@ -1007,6 +1007,10 @@ table.table_list a.collapse
 	height: 31px;
 	line-height: 31px;
 }
+a.collapse img
+{
+	vertical-align: text-top;
+}
 
 /* The half-round header bars for some tables. */
 .table_grid tr.catbg, .table_grid tr.titlebg

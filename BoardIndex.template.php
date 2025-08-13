@@ -29,7 +29,7 @@ function template_main()
 	<div id="newsfader">
 		<div class="cat_bar">
 			<h3 class="catbg">
-				<img id="newsupshrink" src="', $settings['images_url'], '/collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
+				<img id="newsupshrink" src="', $settings['images_url'], '/', $context['theme_variant_url'] ,'collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
 				', $txt['news'], '
 			</h3>
 		</div>
@@ -290,7 +290,7 @@ function template_info_center()
 	<div class="roundframe"><div class="innerframe">
 		<div class="cat_bar">
 			<h3 class="catbg">
-				<img class="icon" id="upshrink_ic" src="', $settings['images_url'], '/collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
+				<img class="icon" id="upshrink_ic" src="', $settings['images_url'], '/', $context['theme_variant_url'] ,'collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
 				', sprintf($txt['info_center_title'], $context['forum_name_html_safe']), '
 			</h3>
 		</div>
