@@ -11,6 +11,7 @@
 	--salmon:			#EECFCF;
 	--salmon-dark:		#DDB6B6;
 	--salmon-material:	#EF9A9A;
+	--some-salmon: 		#D27A7B;
 	--red:				#B14E4F;
 	--dark-red: 		#7F3031;
 	--darker-red:		#541F1F;
@@ -547,7 +548,7 @@ code.bbc_code
 	font-size: 1.1em;
 	font-weight: bold;
 	background: var(--accent-primary);
-	color: var(--header-accent);
+	color: var(--header-accent) !important;
 	padding: 0 5px;
 	text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
@@ -703,7 +704,7 @@ a.navPages
 	display: inline-block;
 	width: 0px;
 	font-size: 12px;
-	margin-right: 0px;
+	margin-right: 12px;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -1237,11 +1238,11 @@ span.lowerframe span
 }
 .auto_suggest_item
 {
-	background-color: var(--background-secondary);
+	background-color: var(--dropdown-primary);
 }
 .auto_suggest_item_hover
 {
-	background-color: var(--background-primary);
+	background-color: var(--dropdown-secondary);
 	cursor: pointer;
 }
 #toAddItemContainer
@@ -2783,14 +2784,25 @@ ul.post_options li
 
 /* Styles for inline labels */
 
-.label-primary
+/* Message counter labels in the nav bar */
+ul.navbar-nav > li > a > .label-primary
 {
+	color: var(--navigation-primary);
+	background-color: var(--label-accent);
+}
+
+/* All other labels, message counters in dropdowns 
+ * and other status labels throughout that are usually
+ * on the default background 					*/
+.label-primary, .dropdown-menu .label-primary
+{
+	color: white;
 	background-color: var(--label-primary);
 }
 
 .label
 {
-	padding: .3em .8em;
+	padding: .3em .6em;
 	font-size: 80%;
 }
 
@@ -3056,7 +3068,30 @@ tr.titlebg td
 {
 	display: block;
 	font-size: 1.3em;
-} 
+}
+.catbg #quick_search form 
+{
+	font-size: 0.8em !important;
+	padding: 0px;
+	height: 40px;
+	line-height: 0.9em;
+	display: flex;
+	align-items: center;
+}
+
+.catbg #quick_search form .form-control
+{
+	max-width: 300px;
+	height: 28px;
+	margin: 4px;
+	padding: 4px;
+}
+
+.catbg #quick_search form input.form-control
+{
+	width: 100%;
+}
+
 #admin_login .centertext
 {
 	padding: 1em;
@@ -3114,6 +3149,7 @@ tr.titlebg td
 	left: 0;
 	right: 0;
 	overflow: hidden;
+	width: 100%;
 }
 
 tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td
@@ -4080,7 +4116,7 @@ span.hidelink
 }
 .boards-box {
 	padding: 0px;
-	border: 1px solid var(--red);
+	border: 1px solid var(--accent-primary);
 	border-top: 0px;
 }
 .boards-box .table_list tbody > tr + tr {
@@ -4144,6 +4180,13 @@ p.footer-load {
 }
 
 /**** FontAwesome ****/
+/* Ensure large icons on main boards page 
+ * are theme-appropriate. All other FontAwesome
+ * instances are inside buttons */
+.fa-3x {
+	color: var(--text-primary);
+}
+
 /* Mark Read */
 .fa-markread::before,
 .fa-markselectread::before {

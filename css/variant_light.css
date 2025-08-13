@@ -15,7 +15,7 @@
 	--dropdown-primary: white;
 	--dropdown-secondary: var(--grey93-material);
 
-	--text-primary: var(--grey27); 
+	--text-primary: var(--grey27-material);
 	--text-secondary: var(--grey62-material);
 	
 	--text-link: black;
@@ -24,6 +24,8 @@
 	--text-link-secondary-hover: var(--dark-red);
 
 	--label-primary: var(--red);
+	--label-accent: var(--header-accent);
+
 	--navigation-primary: var(--dark-red);
 	--navigation-secondary: black;
 

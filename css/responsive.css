@@ -255,20 +255,20 @@
 	}
 	h3.catbg #quick_search form
 	{
-		margin: 0 0 8px 0;
-		padding: 0;
+		/* margin: 0 0 8px 0; */
+		padding: 0 !important;
 	}
 	h3.catbg #quick_search form input
 	{
-		margin: 0 0 12px 0;
+		/* margin: 0 0 12px 0; */
 	}
 	h3.catbg #quick_search form select option
 	{
-		padding: 4px;
+		/* padding: 4px; */
 	}
 	h3.catbg #quick_search form .button_submit
 	{
-		margin: 0 3px;
+		/* margin: 0 3px; */
 	}
 	#credits_page
 	{
@@ -429,6 +429,12 @@
 	{
 		background-color: white;
 	}
+	.dropdown-menu .label-primary
+	{
+		color: var(--navigation-primary) !important;
+		background-color: var(--label-accent) !important;
+	}
+
 	.msearch_details
 	{
 		float: none !important;
