@@ -17,13 +17,16 @@
 	--darker-red:		#541F1F;
 	--red-material: 	#C62828;
 	--dark-red-material:#B71C1C;
+	--puce:				#592F2F;
 	--lightest-brown: 	#EFEBE9;
 	--light-brown:		#D7CCC8;
 	--grey96-material: 	#F5F5F5;
 	--grey95:			#F2F2F2;
 	--grey93-material:	#EEEEEE;
 	--grey88-material:	#E0E0E0;
+	--grey80:			#CECECE;
 	--grey68:			#AEAEAE;
+	--grey50:			#808080;
 	--grey62-material:	#9E9E9E;
 	--grey38-material:	#616161;
 	--grey27-material:	#424242;
@@ -602,10 +605,10 @@ div.pagesection div.floatright input
 	margin-top: 3px;
 }
 
-a.navPages
+/* a.navPages
 {
 	color: var(--navigation-primary) !important;
-}
+} */
 
 /* Colors for background of posts requiring approval */
 .approvebg
@@ -690,7 +693,19 @@ a.navPages
 /* Messages that somehow need to attract the attention. */
 .alert
 {
+	margin-top: 12px;
+	margin-bottom: 12px;
 	color: var(--dark-red);
+}
+.alert-warning
+{
+	background-color: var(--alert);
+	border-color: var(--alert-text);
+	border-radius: 12px;
+}
+.alert-warning .alert-link
+{
+	color: var(--text-link-secondary);
 }
 .alert-danger
 {
@@ -710,7 +725,7 @@ a.navPages
 }
 .alert-dismissable .close
 {
-	top: 2px;
+	top: 0px;
 }
 .close
 {
@@ -2083,7 +2098,7 @@ div.table_frame .table_list
 }
 #messageindex a:hover
 {
-	color: var(--text-link-secondary-hover);
+	color: var(--text-link-hover);
 }
 /* the page navigation area */
 .childboards

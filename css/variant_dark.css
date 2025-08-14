@@ -15,7 +15,7 @@
 	--dropdown-primary: var(--grey20);
 	--dropdown-secondary: var(--grey13-material);
 
-	--text-primary: var(--lightest-brown);
+	--text-primary: var(--grey88-material);
 	--text-secondary: var(--grey62-material);
 
 	--text-link: white;
@@ -50,9 +50,9 @@
 	--quote-secondary: var(--grey20);
 
 	--post-sticky-primary: var(--darker-red);
-	--post-sticky-secondary: var(--darker-red);
-	--post-locked-primary: var(--darker-red);
-	--post-locked-secondary: var(--darker-red);
+	--post-sticky-secondary: var(--puce);
+	--post-locked-primary: var(--grey50);
+	--post-locked-secondary: var(--grey38-material);
 	
 }
 

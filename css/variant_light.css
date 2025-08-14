@@ -51,8 +51,8 @@
 
 	--post-sticky-primary: var(--salmon-dark);
 	--post-sticky-secondary: var(--salmon);
-	--post-locked-primary: var(--salmon-dark);
-	--post-locked-secondary: var(--salmon-dark); 
+	--post-locked-primary: var(--grey68);
+	--post-locked-secondary: var(--grey80); 
 
 }
 
