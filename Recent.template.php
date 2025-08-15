@@ -16,14 +16,15 @@ function template_main()
 
 	echo '
 	<div id="recent" class="main_section">
+		<div class="pagesection">
+			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
+		</div>
 		<div class="cat_bar">
 			<h3 class="catbg">
 				<span class="ie6_header floatleft"><img src="', $settings['images_url'], '/post/xx.gif" alt="" class="icon" />',$txt['recent_posts'],'</span>
 			</h3>
 		</div>
-		<div class="pagesection">
-			<span class="pagelinks">', $txt['pages'], ' ', $context['page_index'], '</span>
-		</div>';
+		';
 
 	foreach ($context['posts'] as $post)
 	{
@@ -150,7 +151,7 @@ function template_unread()
 							</th>';
 		else
 			echo '
-							<th scope="col" class="smalltext last_th hidden-xs-maybe" width="22%">
+							<th scope="col" class="smalltext last_th" width="22%">
 								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] == 'last_post' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] == 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 		echo '
@@ -326,7 +327,7 @@ function template_replies()
 		// Show a "select all" box for quick moderation?
 		if ($showCheckboxes)
 				echo '
-							<th scope="col" width="22%" class="hidden-xs-maybe">
+							<th scope="col" width="22%" class="">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] === 'last_post' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] === 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>
 							<th class="last_th">
@@ -334,7 +335,7 @@ function template_replies()
 							</th>';
 		else
 			echo '
-							<th scope="col" class="last_th hidden-xs-maybe" width="22%">
+							<th scope="col" class="last_th" width="22%">
 								<a href="', $scripturl, '?action=unreadreplies', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] === 'last_post' && $context['sort_direction'] === 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] === 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 		echo '

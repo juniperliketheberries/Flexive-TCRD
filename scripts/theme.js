@@ -104,12 +104,12 @@ $(document).ready(function(){
 	$(".errorbox").prepend("<button data-dismiss='alert' class='close' type='button'>×</button><i class='fa fa-warning icon-sign'></i>");
 	$(".errorbox").attr("class", "alert alert-dismissable alert-danger"); 
 	$("input[name=delete]").before("<span class='btn-label' style='left: 7px !important; top: -3px;'><i class='fa fa-trash-o'></i></span>");
-	$("input[name=delete], button[name=delete]").attr("class", "btn btn-danger").attr("style", "padding-left: 45px; margin-left: -25px;");
+	// $("input[name=delete], button[name=delete]").attr("class", "btn btn-danger").attr("style", "padding-left: 45px; margin-left: -25px;");
 	$("img[alt=\'"+txtnew+"'], img.new_posts").replaceWith(" <span class=\'label label-primary\'>"+txtnew+"</span>");
 	if (st_disable_fa_icons != 1) {
-		$("img[src=\'"+smf_images_url+"/"+varianteurl+"off.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"new_none.png\']").replaceWith("<span style=\'opacity: 0.3;\' class=\'far fa-copy fa-3x\'></span>");
-		$("img[src=\'"+smf_images_url+"/"+varianteurl+"on.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"on2.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"new_some.png\']").replaceWith("<span class=\'fas fa-copy fa-3x text-primary\'></span>");
-		$("img[src=\'"+smf_images_url+"/"+varianteurl+"redirect.png\'],img[src=\'"+smf_images_url+"/"+varianteurl+"new_redirect.png\']").replaceWith("<span class=\'fa fa-link fa-3x text-primary\'></span>");
+		$("img[src=\'"+smf_images_url+"/off.png\'],img[src=\'"+smf_images_url+"/new_none.png\']").replaceWith("<span style=\'opacity: 0.3;\' class=\'far fa-copy fa-3x\'></span>");
+		$("img[src=\'"+smf_images_url+"/on.png\'],img[src=\'"+smf_images_url+"/on2.png\'],img[src=\'"+smf_images_url+"/new_some.png\']").replaceWith("<span class=\'fas fa-copy fa-3x text-primary\'></span>");
+		$("img[src=\'"+smf_images_url+"/redirect.png\'],img[src=\'"+smf_images_url+"/new_redirect.png\']").replaceWith("<span class=\'fa fa-link fa-3x text-primary\'></span>");
 	}
 	if ($(window).width() >= 767)
 		$('[data-toggle="dropdown"]').bootstrapDropdownHover();

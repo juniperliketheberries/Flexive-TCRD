@@ -29,7 +29,7 @@ function template_main()
 	<div id="newsfader">
 		<div class="cat_bar">
 			<h3 class="catbg">
-				<img id="newsupshrink" src="', $settings['images_url'], '/collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
+				<img id="newsupshrink" src="', $settings['images_url'], '/', $context['theme_variant_url'] ,'collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
 				', $txt['news'], '
 			</h3>
 		</div>
@@ -135,15 +135,15 @@ function template_main()
 				// If the board or children is new, show an indicator.
 				if ($board['new'] || $board['children_new'])
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'on', $board['new'] ? '' : '2', '.png" alt="', $txt['new_posts'], '" title="', $txt['new_posts'], '" />';
+							<img src="', $settings['images_url'], '/on', $board['new'] ? '' : '2', '.png" alt="', $txt['new_posts'], '" title="', $txt['new_posts'], '" />';
 				// Is it a redirection board?
 				elseif ($board['is_redirect'])
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'redirect.png" alt="*" title="*" />';
+							<img src="', $settings['images_url'], '/redirect.png" alt="*" title="*" />';
 				// No new posts at all! The agony!!
 				else
 					echo '
-							<img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'off.png" alt="', $txt['old_posts'], '" title="', $txt['old_posts'], '" />';
+							<img src="', $settings['images_url'], '/off.png" alt="', $txt['old_posts'], '" title="', $txt['old_posts'], '" />';
 
 				echo '
 						</a>
@@ -253,9 +253,9 @@ function template_main()
 
 		echo '
 		<ul class="reset">
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_some.png" alt="" /> <span class="pi_text">', $txt['new_posts'], '</span></li>
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_none.png" alt="" /> <span class="pi_text">', $txt['old_posts'], '</span></li>
-			<li class="floatleft"><img src="', $settings['images_url'], '/', $context['theme_variant_url'], 'new_redirect.png" alt="" /> <span class="pi_text">', $txt['redirect_board'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_some.png" alt="" /> <span class="pi_text">', $txt['new_posts'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_none.png" alt="" /> <span class="pi_text">', $txt['old_posts'], '</span></li>
+			<li class="floatleft"><img src="', $settings['images_url'], '/new_redirect.png" alt="" /> <span class="pi_text">', $txt['redirect_board'], '</span></li>
 		</ul>
 	</div>';
 
@@ -290,7 +290,7 @@ function template_info_center()
 	<div class="roundframe"><div class="innerframe">
 		<div class="cat_bar">
 			<h3 class="catbg">
-				<img class="icon" id="upshrink_ic" src="', $settings['images_url'], '/collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
+				<img class="icon" id="upshrink_ic" src="', $settings['images_url'], '/', $context['theme_variant_url'] ,'collapse.gif" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />
 				', sprintf($txt['info_center_title'], $context['forum_name_html_safe']), '
 			</h3>
 		</div>

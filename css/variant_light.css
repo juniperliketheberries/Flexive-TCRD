@@ -1,0 +1,61 @@
+:root {
+	/* Light Theme */
+	
+	--header-primary: var(--grey20);
+	--header-secondary: var(--red);
+	--header-accent: white;
+	--header-primary-hover: var(--salmon);
+	--header-secondary-hover: var(--dark-red);
+
+	--background-primary: var(--grey93-material); 
+	--background-secondary: var(--light-pink);
+	--background-tertiary: var(--grey88-material); 
+	--background-header: var(--near-white);
+
+	--dropdown-primary: white;
+	--dropdown-secondary: var(--grey93-material);
+
+	--text-primary: var(--grey27-material);
+	--text-secondary: var(--grey62-material);
+	
+	--text-link: black;
+	--text-link-hover: var(--red);
+	--text-link-secondary: var(--red);
+	--text-link-secondary-hover: var(--dark-red);
+
+	--label-primary: var(--red);
+	--label-accent: var(--header-accent);
+
+	--navigation-primary: var(--dark-red);
+	--navigation-secondary: black;
+
+	--button-primary: white;
+	--button-secondary: var(--red);
+	--button-tertiary: var(--grey10);
+
+	--button-text-primary: var(--grey20);
+	--button-text-secondary: white;
+
+	--accent-primary: var(--red); 
+	--accent-secondary: var(--dark-red); 
+	--accent-tertiary: var(--dark-red); 
+
+	--post-primary: var(--grey96-material);
+	--post-secondary: var(--also-white);
+	--post-tertiary:white;
+
+	--form-primary: white;
+
+	--quote-primary: var(--grey88-material);
+	--quote-secondary: var(--grey95);
+
+	--post-sticky-primary: var(--salmon-dark);
+	--post-sticky-secondary: var(--salmon);
+	--post-locked-primary: var(--grey68);
+	--post-locked-secondary: var(--grey80); 
+
+}
+
+.fa-theme-toggle::before {
+	content:"\f186";
+}
